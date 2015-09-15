@@ -1,0 +1,6 @@
+Z:\Student\Senpai(Teacher)\Senpai(Teacher)\obj\x86\Debug\Senpai_Teacher_.Form1.resources
+Z:\Student\Senpai(Teacher)\Senpai(Teacher)\obj\x86\Debug\Senpai_Teacher_.Login.resources
+Z:\Student\Senpai(Teacher)\Senpai(Teacher)\obj\x86\Debug\Senpai_Teacher_.Resources.resources
+Z:\Student\Senpai(Teacher)\Senpai(Teacher)\obj\x86\Debug\Senpai_Teacher_.Signup.resources
+Z:\Student\Senpai(Teacher)\Senpai(Teacher)\obj\x86\Debug\Senpai_Teacher_.Signup2.resources
+Z:\Student\Senpai(Teacher)\Senpai(Teacher)\obj\x86\Debug\Senpai(Teacher).vbproj.GenerateResource.Cache
