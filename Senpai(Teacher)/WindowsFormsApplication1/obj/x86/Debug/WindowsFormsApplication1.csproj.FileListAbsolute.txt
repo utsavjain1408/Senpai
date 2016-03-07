@@ -1,0 +1,14 @@
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Login.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Properties.Resources.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Signup2.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Signup.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.SignupF.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.ClassRoom.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.CreateClassRoom.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.Home.resources
+Z:\Student\Senpai(Teacher)\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.StaffRoom.resources
