@@ -16,5 +16,21 @@ namespace Senpai__Organization_
         {
             InitializeComponent();
         }
+        public DashBoard(DataPassing ob)
+        {
+            InitializeComponent();
+            x = ob;
+        }
+        DataPassing x = new DataPassing();
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(x.a);
+        }
+
+        private void DashBoard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

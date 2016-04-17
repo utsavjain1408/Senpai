@@ -5,6 +5,13 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Senpai (Organization)", "Senpai (Organization)\Senpai (Organization).csproj", "{9D2BA883-750B-44EE-95CC-AF62E93EDE53}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{F0F170AD-E765-4E03-824A-F0E766694AAF}"
+	ProjectSection(SolutionItems) = preProject
+		Senpai (Organization)\Logo SENPAI\icon.jpg = Senpai (Organization)\Logo SENPAI\icon.jpg
+		Senpai (Organization)\Logo SENPAI\Print-2.jpg = Senpai (Organization)\Logo SENPAI\Print-2.jpg
+		Senpai (Organization)\Logo SENPAI\SENPAI.jpg = Senpai (Organization)\Logo SENPAI\SENPAI.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -28,21 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
+            this.CreateStaffroomButton = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // CreateStaffroomButton
             // 
-            this.button1.Location = new System.Drawing.Point(61, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Create Staffroom";
-            this.button1.UseVisualStyleBackColor = true;
+            this.CreateStaffroomButton.Location = new System.Drawing.Point(61, 38);
+            this.CreateStaffroomButton.Name = "CreateStaffroomButton";
+            this.CreateStaffroomButton.Size = new System.Drawing.Size(98, 23);
+            this.CreateStaffroomButton.TabIndex = 0;
+            this.CreateStaffroomButton.Text = "Create Staffroom";
+            this.CreateStaffroomButton.UseVisualStyleBackColor = true;
+            this.CreateStaffroomButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
@@ -88,9 +90,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CreateStaffroomButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashBoard";
             this.Text = "Senpai For Organization";
+            this.Load += new System.EventHandler(this.DashBoard_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,7 +102,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CreateStaffroomButton;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
