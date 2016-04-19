@@ -54,6 +54,13 @@
     <Compile Include="ConfirmSignUp.Designer.cs">
       <DependentUpon>ConfirmSignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateClassroom.cs" />
+    <Compile Include="CreateStaffroom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateStaffroom.Designer.cs">
+      <DependentUpon>CreateStaffroom.cs</DependentUpon>
+    </Compile>
     <Compile Include="DashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +91,9 @@
     </Compile>
     <EmbeddedResource Include="ConfirmSignUp.resx">
       <DependentUpon>ConfirmSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateStaffroom.resx">
+      <DependentUpon>CreateStaffroom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DashBoard.resx">
       <DependentUpon>DashBoard.cs</DependentUpon>

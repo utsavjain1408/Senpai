@@ -94,14 +94,14 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(161, 37);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(127, 20);
             this.textBox3.TabIndex = 7;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(161, 82);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(127, 20);
             this.textBox2.TabIndex = 6;
             // 
             // textBox1
@@ -172,7 +172,7 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(57, 38);
+            this.dataGridView1.Location = new System.Drawing.Point(58, 30);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(240, 150);
             this.dataGridView1.TabIndex = 6;
@@ -257,7 +257,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.40182F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51.59818F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 98F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 99F));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;

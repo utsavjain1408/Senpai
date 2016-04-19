@@ -13,3 +13,4 @@ C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\obj\D
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\bin\Debug\App.config
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\obj\Debug\Senpai__Organization_.ConfirmSignUp.resources
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\obj\Debug\Senpai__Organization_.SignUpForm.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\obj\Debug\Senpai__Organization_.CreateStaffroom.resources

@@ -11,27 +11,61 @@ using G = System.Configuration;   // System.Configuration.dll
 using D = System.Data;            // System.Data.dll
 using C = System.Data.SqlClient;  // System.Data.dll
 using T = System.Text;
+using System.Data.SqlClient;
+using System.Configuration;
+
 
 namespace Senpai__Organization_
 {
     public partial class SenpaiOrganization : Form
     {
-        //C.SqlConnection cnDataCon =
-          //new C.SqlConnection(G.ConfigurationManager.ConnectionStrings["cnExternalData"].ConnectionString);
-        // dataset: Container object for data tables  
-        DataSet dsData = new DataSet();
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
+        SqlCommand CommandToGetEmail = null;
+        SqlCommand CommandToGetPassword = null;
         public SenpaiOrganization()
         {
             InitializeComponent();
-           
-            x.a = "Hello World";
+            EmailTB.Text = "";
+            PasswordTB.Text = "";
         }
         DataPassing x = new DataPassing();
         private void button1_Click(object sender, EventArgs e)
         {
-            DashBoard d = new DashBoard(x);
-            d.Show();
-            
+            String Error = " "; ;
+            if (IsValidEmail(EmailTB.Text)!=true)
+            {
+                Error += "Please Enter correct Email!!\n ";
+            }
+            if (EmailTB.Text == "")
+            {
+                Error +="Please Enter Email Address !!\n";
+            }
+            if (PasswordTB.Text == "")
+            {
+                Error+=" Please Enter Password !!";
+            }
+            if (Error != " ")
+            {
+                MessageBox.Show(Error);
+            }
+            var appSettings = ConfigurationManager.AppSettings;
+            string QueryStringToGetEmail = "select Email from Senpai_Organization where Email='("+EmailTB.Text+")'";
+            string QueryStringToGetPassword = "select Password from Senpai_Organization where Email='(" + EmailTB.Text + ")'";
+            conn.Open();
+            CommandToGetEmail = new SqlCommand(QueryStringToGetEmail, conn);
+            CommandToGetEmail.Parameters.ToString();
+            CommandToGetEmail.CommandType = CommandType.Text;
+            object UserEmail = CommandToGetEmail.ExecuteNonQuery();
+
+            if(UserEmail.Equals()==true)
+            CommandToGetPassword = new SqlCommand(QueryStringToGetPassword, conn);
+            CommandToGetPassword.Parameters.ToString();
+            CommandToGetPassword.CommandType = CommandType.Text;
+            object UserPassword = CommandToGetEmail.ExecuteScalar();
+            MessageBox.Show(UserEmail.ToString()+UserPassword.ToString());
+            //  DashBoard d = new DashBoard(x);
+            //  d.Show();
+
         }
 
         private void SenpaiOrganization_Load(object sender, EventArgs e)
@@ -43,6 +77,18 @@ namespace Senpai__Organization_
         {
             SignUpForm CreateAccount = new SignUpForm();
             CreateAccount.Show();
+        }
+        bool IsValidEmail(string email)
+        {
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(email);
+                return addr.Address == email;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }
