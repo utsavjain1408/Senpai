@@ -55,17 +55,19 @@ namespace Senpai__Organization_
             CommandToGetEmail = new SqlCommand(QueryStringToGetEmail, conn);
             CommandToGetEmail.Parameters.ToString();
             CommandToGetEmail.CommandType = CommandType.Text;
-            object UserEmail = CommandToGetEmail.ExecuteNonQuery();
+            /*    object UserEmail = CommandToGetEmail.ExecuteNonQuery();
 
-            if(UserEmail.Equals()==true)
-            CommandToGetPassword = new SqlCommand(QueryStringToGetPassword, conn);
-            CommandToGetPassword.Parameters.ToString();
-            CommandToGetPassword.CommandType = CommandType.Text;
-            object UserPassword = CommandToGetEmail.ExecuteScalar();
-            MessageBox.Show(UserEmail.ToString()+UserPassword.ToString());
-            //  DashBoard d = new DashBoard(x);
-            //  d.Show();
-
+                if (UserEmail != null)
+                {
+                    CommandToGetPassword = new SqlCommand(QueryStringToGetPassword, conn);
+                    CommandToGetPassword.Parameters.ToString();
+                    CommandToGetPassword.CommandType = CommandType.Text;
+                    object UserPassword = CommandToGetEmail.ExecuteScalar();
+                    MessageBox.Show(UserEmail.ToString() + UserPassword.ToString());
+                    //  
+                }*/
+            DashBoard d = new DashBoard(x);
+            d.Show();
         }
 
         private void SenpaiOrganization_Load(object sender, EventArgs e)

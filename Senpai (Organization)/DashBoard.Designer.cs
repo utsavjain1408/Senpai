@@ -75,7 +75,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Senpai__Organization_.Properties.Resources.Print_2;
+            this.pictureBox1.Image = global::Senpai__Organization_.Properties.Resources.Print2;
             this.pictureBox1.Location = new System.Drawing.Point(63, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(259, 76);

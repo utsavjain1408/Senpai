@@ -25,7 +25,8 @@ namespace Senpai__Organization_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(x.a);
+            CreateStaffroom ob = new CreateStaffroom();
+            ob.Show();
         }
 
         private void DashBoard_Load(object sender, EventArgs e)

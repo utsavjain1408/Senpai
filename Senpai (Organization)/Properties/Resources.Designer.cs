@@ -63,9 +63,9 @@ namespace Senpai__Organization_.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Print_2 {
+        internal static System.Drawing.Bitmap Print2 {
             get {
-                object obj = ResourceManager.GetObject("Print-2", resourceCulture);
+                object obj = ResourceManager.GetObject("Print2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -105,7 +105,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Senpai__Organization_.Properties.Resources.Print_2;
+            this.pictureBox1.Image = global::Senpai__Organization_.Properties.Resources.Print2;
             this.pictureBox1.Location = new System.Drawing.Point(32, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(225, 65);
@@ -117,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(307, 273);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel1);
