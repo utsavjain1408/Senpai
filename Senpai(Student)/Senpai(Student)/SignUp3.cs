@@ -15,11 +15,22 @@ namespace Senpai_Student_
         {
             InitializeComponent();
         }
+        SignUpData ob = new SignUpData();
 
+        public SignUp3(SignUpData temp)
+        {
+            InitializeComponent();
+            ob = temp;
+        }
         private void BFinish_Click(object sender, EventArgs e)
         {
             SignUpFinal s = new SignUpFinal();
             s.Visible = true;
+        }
+
+        private void SignUp3_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

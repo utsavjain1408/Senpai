@@ -43,5 +43,11 @@ namespace Senpai_Student_
             ClassRoom ob = new ClassRoom();
             ob.Show();
         }
+
+        private void ButtonViewInfo_Click(object sender, EventArgs e)
+        {
+            ViewInfo ob = new ViewInfo();
+            ob.Show();
+        }
     }
 }

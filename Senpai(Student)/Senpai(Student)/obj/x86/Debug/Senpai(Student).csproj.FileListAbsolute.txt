@@ -17,3 +17,23 @@ Z:\Student\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).exe.manifes
 Z:\Student\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).application
 Z:\Student\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).exe.manifest
 Z:\Student\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).application
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).exe
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).pdb
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).csprojResolveAssemblyReference.cache
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.ClassRoom.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.FindClassroom.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.Home.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.SignUp3.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.LoginForm.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.Properties.Resources.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.SignnUpForm.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.SignUp2.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.SignUpFinal.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai_Student_.ViewInfo.resources
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).csproj.GenerateResource.Cache
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).exe.manifest
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).application
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).exe
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).pdb
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).exe.manifest
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).application

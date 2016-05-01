@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignnUpForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,13 +42,15 @@
             this.TBPhone = new System.Windows.Forms.TextBox();
             this.DTPDOB = new System.Windows.Forms.DateTimePicker();
             this.BNext = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Gender.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(90, 37);
+            this.label1.Location = new System.Drawing.Point(97, 106);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(92, 13);
             this.label1.TabIndex = 0;
@@ -57,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 77);
+            this.label2.Location = new System.Drawing.Point(44, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(35, 13);
             this.label2.TabIndex = 1;
@@ -66,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 103);
+            this.label3.Location = new System.Drawing.Point(44, 172);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 13);
             this.label3.TabIndex = 2;
@@ -75,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 132);
+            this.label4.Location = new System.Drawing.Point(44, 201);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 13);
             this.label4.TabIndex = 3;
@@ -84,7 +87,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 158);
+            this.label5.Location = new System.Drawing.Point(44, 230);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 13);
             this.label5.TabIndex = 4;
@@ -116,7 +119,7 @@
             // 
             this.Gender.Controls.Add(this.RDMale);
             this.Gender.Controls.Add(this.RDFemale);
-            this.Gender.Location = new System.Drawing.Point(40, 183);
+            this.Gender.Location = new System.Drawing.Point(47, 252);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(210, 26);
             this.Gender.TabIndex = 8;
@@ -125,35 +128,35 @@
             // 
             // TBName
             // 
-            this.TBName.Location = new System.Drawing.Point(133, 74);
+            this.TBName.Location = new System.Drawing.Point(140, 143);
             this.TBName.Name = "TBName";
             this.TBName.Size = new System.Drawing.Size(100, 20);
             this.TBName.TabIndex = 9;
             // 
             // TBEmail
             // 
-            this.TBEmail.Location = new System.Drawing.Point(133, 100);
+            this.TBEmail.Location = new System.Drawing.Point(140, 169);
             this.TBEmail.Name = "TBEmail";
             this.TBEmail.Size = new System.Drawing.Size(100, 20);
             this.TBEmail.TabIndex = 10;
             // 
             // TBPhone
             // 
-            this.TBPhone.Location = new System.Drawing.Point(133, 129);
+            this.TBPhone.Location = new System.Drawing.Point(140, 198);
             this.TBPhone.Name = "TBPhone";
             this.TBPhone.Size = new System.Drawing.Size(100, 20);
             this.TBPhone.TabIndex = 11;
             // 
             // DTPDOB
             // 
-            this.DTPDOB.Location = new System.Drawing.Point(133, 155);
+            this.DTPDOB.Location = new System.Drawing.Point(140, 224);
             this.DTPDOB.Name = "DTPDOB";
             this.DTPDOB.Size = new System.Drawing.Size(200, 20);
             this.DTPDOB.TabIndex = 12;
             // 
             // BNext
             // 
-            this.BNext.Location = new System.Drawing.Point(138, 232);
+            this.BNext.Location = new System.Drawing.Point(145, 301);
             this.BNext.Name = "BNext";
             this.BNext.Size = new System.Drawing.Size(82, 26);
             this.BNext.TabIndex = 13;
@@ -161,11 +164,22 @@
             this.BNext.UseVisualStyleBackColor = true;
             this.BNext.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Senpai_Student_.Properties.Resources.Print_2;
+            this.pictureBox1.Location = new System.Drawing.Point(33, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(294, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
+            // 
             // SignnUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(371, 285);
+            this.ClientSize = new System.Drawing.Size(370, 353);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BNext);
             this.Controls.Add(this.DTPDOB);
             this.Controls.Add(this.TBPhone);
@@ -177,10 +191,13 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignnUpForm";
             this.Text = "Senpai for Students";
+            this.Load += new System.EventHandler(this.SignnUpForm_Load);
             this.Gender.ResumeLayout(false);
             this.Gender.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,5 +218,6 @@
         private System.Windows.Forms.TextBox TBPhone;
         private System.Windows.Forms.DateTimePicker DTPDOB;
         private System.Windows.Forms.Button BNext;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

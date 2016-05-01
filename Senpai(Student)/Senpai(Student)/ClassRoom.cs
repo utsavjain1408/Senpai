@@ -35,5 +35,10 @@ namespace Senpai_Student_
         {
             System.Diagnostics.Process.Start(e.Link.LinkData.ToString());
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
