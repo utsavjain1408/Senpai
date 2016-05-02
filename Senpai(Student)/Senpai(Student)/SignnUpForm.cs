@@ -52,7 +52,8 @@ namespace Senpai_Student_
                 ob.Gender = Gender;
                 ob.DOB = DTPDOB.Value;
                 ob.Email = TBEmail.Text;
-                SignUp3 s = new SignUp3();
+                this.Visible = false;
+                SignUp3 s = new SignUp3(ob);
                 s.Enabled = true;
                 s.Visible = true;
             }

@@ -27,11 +27,21 @@ namespace Senpai_Student_
 
         private void BSubmit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Entry Made. You may log in Now");
+            MessageBox.Show("Select Password Now!!");
+            PasswordPanel.Visible = true;
+            PasswordPanel.Enabled = true;
         }
 
         private void SignUpFinal_Load(object sender, EventArgs e)
         {
+            VName.Text = tempdata.Name;
+            VPhone.Text = tempdata.PhoneNumber;
+            VStream.Text = tempdata.Stream;
+            VEmail.Text = tempdata.Email;
+            VGender.Text = tempdata.Gender;
+            VCollege.Text = tempdata.College;
+            PasswordPanel.Visible = false;
+            PasswordPanel.Enabled = false;
 
         }
     }

@@ -24,7 +24,9 @@ namespace Senpai_Student_
         }
         private void BFinish_Click(object sender, EventArgs e)
         {
-            SignUpFinal s = new SignUpFinal();
+            ob.City = TBCity.Text;
+            ob.College = TBCollege.Text;
+            SignUpFinal s = new SignUpFinal(ob, this);
             s.Visible = true;
         }
 

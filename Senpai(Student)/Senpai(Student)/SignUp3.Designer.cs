@@ -32,12 +32,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.LCity = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.TBCity = new System.Windows.Forms.TextBox();
+            this.CBCollege = new System.Windows.Forms.ComboBox();
             this.BFinish = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.PanelAddCollege = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TBCollege = new System.Windows.Forms.TextBox();
             this.LNewCollegeName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.PanelAddCollege.SuspendLayout();
@@ -47,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(80, 80);
+            this.label1.Location = new System.Drawing.Point(98, 92);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 13);
             this.label1.TabIndex = 0;
@@ -72,20 +72,20 @@
             this.LCity.Text = "Enter City";
             this.LCity.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox2
+            // TBCity
             // 
-            this.textBox2.Location = new System.Drawing.Point(154, 119);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.TBCity.Location = new System.Drawing.Point(154, 119);
+            this.TBCity.Name = "TBCity";
+            this.TBCity.Size = new System.Drawing.Size(137, 20);
+            this.TBCity.TabIndex = 4;
             // 
-            // comboBox1
+            // CBCollege
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(154, 148);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 5;
+            this.CBCollege.FormattingEnabled = true;
+            this.CBCollege.Location = new System.Drawing.Point(154, 148);
+            this.CBCollege.Name = "CBCollege";
+            this.CBCollege.Size = new System.Drawing.Size(137, 21);
+            this.CBCollege.TabIndex = 5;
             // 
             // BFinish
             // 
@@ -108,19 +108,19 @@
             // 
             // PanelAddCollege
             // 
-            this.PanelAddCollege.Controls.Add(this.textBox1);
+            this.PanelAddCollege.Controls.Add(this.TBCollege);
             this.PanelAddCollege.Controls.Add(this.LNewCollegeName);
             this.PanelAddCollege.Location = new System.Drawing.Point(54, 189);
             this.PanelAddCollege.Name = "PanelAddCollege";
             this.PanelAddCollege.Size = new System.Drawing.Size(237, 100);
             this.PanelAddCollege.TabIndex = 8;
             // 
-            // textBox1
+            // TBCollege
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 9);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.TBCollege.Location = new System.Drawing.Point(120, 9);
+            this.TBCollege.Name = "TBCollege";
+            this.TBCollege.Size = new System.Drawing.Size(100, 20);
+            this.TBCollege.TabIndex = 1;
             // 
             // LNewCollegeName
             // 
@@ -150,8 +150,8 @@
             this.Controls.Add(this.PanelAddCollege);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BFinish);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.CBCollege);
+            this.Controls.Add(this.TBCity);
             this.Controls.Add(this.LCity);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -172,12 +172,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LCity;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox TBCity;
+        private System.Windows.Forms.ComboBox CBCollege;
         private System.Windows.Forms.Button BFinish;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel PanelAddCollege;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TBCollege;
         private System.Windows.Forms.Label LNewCollegeName;
         private System.Windows.Forms.PictureBox pictureBox1;
     }

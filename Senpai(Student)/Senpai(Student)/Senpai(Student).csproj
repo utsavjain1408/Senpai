@@ -92,6 +92,7 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="SessionValues.cs" />
     <Compile Include="SignUp3.cs">
       <SubType>Form</SubType>
     </Compile>
