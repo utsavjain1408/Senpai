@@ -39,7 +39,7 @@
             // 
             // CreateStaffroomButton
             // 
-            this.CreateStaffroomButton.Location = new System.Drawing.Point(218, 156);
+            this.CreateStaffroomButton.Location = new System.Drawing.Point(218, 145);
             this.CreateStaffroomButton.Name = "CreateStaffroomButton";
             this.CreateStaffroomButton.Size = new System.Drawing.Size(104, 23);
             this.CreateStaffroomButton.TabIndex = 0;
