@@ -37,3 +37,4 @@ C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Stud
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).pdb
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).exe.manifest
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\obj\x86\Debug\Senpai(Student).application
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai(Student)\Senpai(Student)\bin\Debug\Senpai(Student).exe.config
