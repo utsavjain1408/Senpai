@@ -34,12 +34,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ViewDetailButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // CreateStaffroomButton
             // 
-            this.CreateStaffroomButton.Location = new System.Drawing.Point(218, 145);
+            this.CreateStaffroomButton.Location = new System.Drawing.Point(42, 237);
             this.CreateStaffroomButton.Name = "CreateStaffroomButton";
             this.CreateStaffroomButton.Size = new System.Drawing.Size(104, 23);
             this.CreateStaffroomButton.TabIndex = 0;
@@ -83,11 +84,21 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // ViewDetailButton
+            // 
+            this.ViewDetailButton.Location = new System.Drawing.Point(247, 147);
+            this.ViewDetailButton.Name = "ViewDetailButton";
+            this.ViewDetailButton.Size = new System.Drawing.Size(75, 23);
+            this.ViewDetailButton.TabIndex = 6;
+            this.ViewDetailButton.Text = "View Details";
+            this.ViewDetailButton.UseVisualStyleBackColor = true;
+            // 
             // DashBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 298);
+            this.Controls.Add(this.ViewDetailButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
@@ -110,5 +121,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button ViewDetailButton;
     }
 }

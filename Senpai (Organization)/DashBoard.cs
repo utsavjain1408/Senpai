@@ -16,12 +16,12 @@ namespace Senpai__Organization_
         {
             InitializeComponent();
         }
-        public DashBoard(DataPassing ob)
+        public DashBoard(SessionData ob)
         {
             InitializeComponent();
             x = ob;
         }
-        DataPassing x = new DataPassing();
+        SessionData x = new SessionData();
 
         private void button1_Click(object sender, EventArgs e)
         {

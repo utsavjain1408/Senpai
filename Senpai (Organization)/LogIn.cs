@@ -32,42 +32,55 @@ namespace Senpai__Organization_
         private void button1_Click(object sender, EventArgs e)
         {
             String Error = " "; ;
-            if (IsValidEmail(EmailTB.Text)!=true)
+            if (IsValidEmail(EmailTB.Text) != true)
             {
                 Error += "Please Enter correct Email!!\n ";
             }
             if (EmailTB.Text == "")
             {
-                Error +="Please Enter Email Address !!\n";
+                Error += "Please Enter Email Address !!\n";
             }
             if (PasswordTB.Text == "")
             {
-                Error+=" Please Enter Password !!";
+                Error += " Please Enter Password !!";
             }
             if (Error != " ")
             {
                 MessageBox.Show(Error);
             }
-            var appSettings = ConfigurationManager.AppSettings;
-            string QueryStringToGetEmail = "select Email from Senpai_Organization where Email='("+EmailTB.Text+")'";
-            string QueryStringToGetPassword = "select Password from Senpai_Organization where Email='(" + EmailTB.Text + ")'";
-            conn.Open();
-            CommandToGetEmail = new SqlCommand(QueryStringToGetEmail, conn);
-            CommandToGetEmail.Parameters.ToString();
-            CommandToGetEmail.CommandType = CommandType.Text;
-            /*    object UserEmail = CommandToGetEmail.ExecuteNonQuery();
+            else
+            {
+                LoadingLabel.Visible = true;
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
 
-                if (UserEmail != null)
+                SqlCommand cmd = new SqlCommand("Select * from Senpai_Organization where Email=@username and Password=@password", con);
+                cmd.Parameters.AddWithValue("@username", EmailTB.Text);
+                cmd.Parameters.AddWithValue("@password", PasswordTB.Text);
+                con.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
+                con.Close();
+                int count = ds.Tables[0].Rows.Count;
+                //If count is equal to 1, than show frmMain form
+                if (count == 1)
                 {
-                    CommandToGetPassword = new SqlCommand(QueryStringToGetPassword, conn);
-                    CommandToGetPassword.Parameters.ToString();
-                    CommandToGetPassword.CommandType = CommandType.Text;
-                    object UserPassword = CommandToGetEmail.ExecuteScalar();
-                    MessageBox.Show(UserEmail.ToString() + UserPassword.ToString());
-                    //  
-                }*/
-            DashBoard d = new DashBoard(x);
-            d.Show();
+                    MessageBox.Show("Login Successful!");
+                    SessionData sv = new SessionData();
+                    sv.SenpaiId = ds.Tables[0].Rows[0]["College_Id"].ToString(); ;
+                    sv.Email = ds.Tables[0].Rows[0]["Email"].ToString();
+                    sv.Name = ds.Tables[0].Rows[0]["InstituteName"].ToString();
+                    sv.PhoneNumber = ds.Tables[0].Rows[0]["PhoneNumber"].ToString();
+                    sv.HeadPersonName = ds.Tables[0].Rows[0]["HeadPersonName"].ToString();
+                    sv.City = ds.Tables[0].Rows[0]["City"].ToString();
+                    sv.AboutUs = ds.Tables[0].Rows[0]["AboutUs"].ToString();
+                    sv.StaffroomListId = ds.Tables[0].Rows[0]["StaffRoomListTable"].ToString();
+
+
+                    DashBoard d = new DashBoard(sv);
+                    d.Show();
+                }
+            }
         }
 
         private void SenpaiOrganization_Load(object sender, EventArgs e)
