@@ -20,17 +20,16 @@ namespace Senpai__Organization_
     public partial class SenpaiOrganization : Form
     {
         SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
-        SqlCommand CommandToGetEmail = null;
-        SqlCommand CommandToGetPassword = null;
         public SenpaiOrganization()
         {
             InitializeComponent();
             EmailTB.Text = "";
             PasswordTB.Text = "";
         }
-        DataPassing x = new DataPassing();
+        //DataPassing x = new DataPassing();
         private void button1_Click(object sender, EventArgs e)
         {
+            changeloadingtotrue();
             String Error = " "; ;
             if (IsValidEmail(EmailTB.Text) != true)
             {
@@ -46,14 +45,18 @@ namespace Senpai__Organization_
             }
             if (Error != " ")
             {
+                changeloadingtotrue();
                 MessageBox.Show(Error);
+                LoadingLabel.Visible = false;
             }
             else
             {
-                LoadingLabel.Visible = true;
+                
+                changeloadingtotrue();
+                //LoadingLabel.Visible = true;
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
 
-                SqlCommand cmd = new SqlCommand("Select * from Senpai_Organization where Email=@username and Password=@password", con);
+                SqlCommand cmd = new SqlCommand("Select * from College where Email=@username and Password=@password", con);
                 cmd.Parameters.AddWithValue("@username", EmailTB.Text);
                 cmd.Parameters.AddWithValue("@password", PasswordTB.Text);
                 con.Open();
@@ -63,22 +66,37 @@ namespace Senpai__Organization_
                 con.Close();
                 int count = ds.Tables[0].Rows.Count;
                 //If count is equal to 1, than show frmMain form
+                MessageBox.Show(count.ToString());
                 if (count == 1)
                 {
                     MessageBox.Show("Login Successful!");
+                    SqlCommand cmd1 = new SqlCommand("Select * from Senpai_Organization where Email=@username", con);
+                    cmd1.Parameters.AddWithValue("@username", EmailTB.Text);
+                    con.Open();
+                    SqlDataAdapter adapt1 = new SqlDataAdapter(cmd1);
+                    DataSet ds1 = new DataSet();
+                    adapt1.Fill(ds1);
+                    count = ds1.Tables[0].Columns.Count;
+
+                    MessageBox.Show(ds1.Tables[0].Rows[0]["Email"].ToString()+count);
                     SessionData sv = new SessionData();
-                    sv.SenpaiId = ds.Tables[0].Rows[0]["College_Id"].ToString(); ;
-                    sv.Email = ds.Tables[0].Rows[0]["Email"].ToString();
-                    sv.Name = ds.Tables[0].Rows[0]["InstituteName"].ToString();
-                    sv.PhoneNumber = ds.Tables[0].Rows[0]["PhoneNumber"].ToString();
-                    sv.HeadPersonName = ds.Tables[0].Rows[0]["HeadPersonName"].ToString();
-                    sv.City = ds.Tables[0].Rows[0]["City"].ToString();
-                    sv.AboutUs = ds.Tables[0].Rows[0]["AboutUs"].ToString();
-                    sv.StaffroomListId = ds.Tables[0].Rows[0]["StaffRoomListTable"].ToString();
-
-
+                    sv.SenpaiId = ds1.Tables[0].Rows[0]["College_Id"].ToString(); ;
+                    sv.Email = ds1.Tables[0].Rows[0]["Email"].ToString();
+                    sv.Name = ds1.Tables[0].Rows[0]["InstituteName"].ToString();
+                    sv.PhoneNumber = ds1.Tables[0].Rows[0]["PhoneNumber"].ToString();
+                    sv.HeadPersonName = ds1.Tables[0].Rows[0]["HeadPersonName"].ToString();
+                    sv.City = ds1.Tables[0].Rows[0]["City"].ToString();
+                    sv.AboutUs = ds1.Tables[0].Rows[0]["AboutUs"].ToString();
+                    sv.StaffroomListId = ds1.Tables[0].Rows[0]["StaffRoomListTable"].ToString();
                     DashBoard d = new DashBoard(sv);
                     d.Show();
+                    this.Visible=false;
+                }
+                else
+                {
+                    MessageBox.Show("Login Failed.");
+                    LoadingLabel.Visible = false;
+
                 }
             }
         }
@@ -86,6 +104,11 @@ namespace Senpai__Organization_
         private void SenpaiOrganization_Load(object sender, EventArgs e)
         {
 
+        }
+        public void changeloadingtotrue()
+        {
+            
+            LoadingLabel.Visible = true;
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SenpaiOrganization));
-            this.LogInTB = new System.Windows.Forms.Button();
+            this.LogInButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.EmailTB = new System.Windows.Forms.TextBox();
@@ -41,15 +41,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // LogInTB
+            // LogInButton
             // 
-            this.LogInTB.Location = new System.Drawing.Point(92, 180);
-            this.LogInTB.Name = "LogInTB";
-            this.LogInTB.Size = new System.Drawing.Size(75, 23);
-            this.LogInTB.TabIndex = 0;
-            this.LogInTB.Text = "Log In";
-            this.LogInTB.UseVisualStyleBackColor = true;
-            this.LogInTB.Click += new System.EventHandler(this.button1_Click);
+            this.LogInButton.Location = new System.Drawing.Point(92, 180);
+            this.LogInButton.Name = "LogInButton";
+            this.LogInButton.Size = new System.Drawing.Size(75, 23);
+            this.LogInButton.TabIndex = 0;
+            this.LogInButton.Text = "Log In";
+            this.LogInButton.UseVisualStyleBackColor = true;
+            this.LogInButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -117,6 +117,7 @@
             // LoadingLabel
             // 
             this.LoadingLabel.AutoSize = true;
+            this.LoadingLabel.Enabled = false;
             this.LoadingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoadingLabel.ForeColor = System.Drawing.Color.Red;
             this.LoadingLabel.Location = new System.Drawing.Point(68, 112);
@@ -139,7 +140,7 @@
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.LogInTB);
+            this.Controls.Add(this.LogInButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SenpaiOrganization";
             this.Text = "Senpai For Organization";
@@ -152,7 +153,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button LogInTB;
+        private System.Windows.Forms.Button LogInButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox EmailTB;

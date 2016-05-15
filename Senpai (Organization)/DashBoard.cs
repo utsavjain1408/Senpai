@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace Senpai__Organization_
 {
     public partial class DashBoard : Form
-    {
+    {   SessionData x = new SessionData();
+
         public DashBoard()
         {
             InitializeComponent();
@@ -21,7 +22,6 @@ namespace Senpai__Organization_
             InitializeComponent();
             x = ob;
         }
-        SessionData x = new SessionData();
 
         private void button1_Click(object sender, EventArgs e)
         {

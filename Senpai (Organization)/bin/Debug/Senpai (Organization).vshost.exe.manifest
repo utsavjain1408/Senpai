@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Senpai (Organization).exe" size="1186304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Senpai (Organization).exe" size="1186816">
       <assemblyIdentity name="Senpai (Organization)" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rrNw8N2Kvy9edpP7JepItF9AdnYbl0qYyYpOb0yWm1s=</dsig:DigestValue>
+        <dsig:DigestValue>h4te+VN4mbHA+6QQx1HeruWbM0SJPpmJXZJUnptkmZA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
