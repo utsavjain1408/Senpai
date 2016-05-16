@@ -117,6 +117,12 @@
     <Compile Include="StaffRoom.Designer.cs">
       <DependentUpon>StaffRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDetails.Designer.cs">
+      <DependentUpon>ViewDetails.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ConfirmSignUp.resx">
       <DependentUpon>ConfirmSignUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -144,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StaffRoom.resx">
       <DependentUpon>StaffRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDetails.resx">
+      <DependentUpon>ViewDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -33,8 +33,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ViewDetailButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +42,7 @@
             // 
             this.CreateStaffroomButton.Location = new System.Drawing.Point(42, 237);
             this.CreateStaffroomButton.Name = "CreateStaffroomButton";
-            this.CreateStaffroomButton.Size = new System.Drawing.Size(104, 23);
+            this.CreateStaffroomButton.Size = new System.Drawing.Size(119, 23);
             this.CreateStaffroomButton.TabIndex = 0;
             this.CreateStaffroomButton.Text = "Create Staffroom";
             this.CreateStaffroomButton.UseVisualStyleBackColor = true;
@@ -74,6 +74,16 @@
             this.button3.Text = "View";
             this.button3.UseVisualStyleBackColor = true;
             // 
+            // ViewDetailButton
+            // 
+            this.ViewDetailButton.Location = new System.Drawing.Point(247, 147);
+            this.ViewDetailButton.Name = "ViewDetailButton";
+            this.ViewDetailButton.Size = new System.Drawing.Size(75, 23);
+            this.ViewDetailButton.TabIndex = 6;
+            this.ViewDetailButton.Text = "View Details";
+            this.ViewDetailButton.UseVisualStyleBackColor = true;
+            this.ViewDetailButton.Click += new System.EventHandler(this.ViewDetailButton_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Senpai__Organization_.Properties.Resources.Print2;
@@ -83,15 +93,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
-            // 
-            // ViewDetailButton
-            // 
-            this.ViewDetailButton.Location = new System.Drawing.Point(247, 147);
-            this.ViewDetailButton.Name = "ViewDetailButton";
-            this.ViewDetailButton.Size = new System.Drawing.Size(75, 23);
-            this.ViewDetailButton.TabIndex = 6;
-            this.ViewDetailButton.Text = "View Details";
-            this.ViewDetailButton.UseVisualStyleBackColor = true;
             // 
             // DashBoard
             // 

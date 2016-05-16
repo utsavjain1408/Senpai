@@ -18,3 +18,4 @@ C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\bin\D
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\bin\Debug\Senpai (Organization).application
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\obj\Debug\Senpai (Organization).exe.manifest
 C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\obj\Debug\Senpai (Organization).application
+C:\Users\Utsav\OneDrive\Senpai\Senpai (Organization)\Senpai (Organization)\obj\Debug\Senpai__Organization_.ViewDetails.resources

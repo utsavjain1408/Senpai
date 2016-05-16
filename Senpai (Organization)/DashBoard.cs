@@ -33,5 +33,12 @@ namespace Senpai__Organization_
         {
 
         }
+
+        private void ViewDetailButton_Click(object sender, EventArgs e)
+        {
+            ViewDetails ob = new ViewDetails(x);
+            ob.Show();
+            this.Hide();
+        }
     }
 }
