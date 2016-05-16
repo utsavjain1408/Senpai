@@ -46,7 +46,7 @@
             this.LogInButton.Location = new System.Drawing.Point(92, 180);
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.Size = new System.Drawing.Size(75, 23);
-            this.LogInButton.TabIndex = 0;
+            this.LogInButton.TabIndex = 3;
             this.LogInButton.Text = "Log In";
             this.LogInButton.UseVisualStyleBackColor = true;
             this.LogInButton.Click += new System.EventHandler(this.button1_Click);
@@ -74,14 +74,14 @@
             this.EmailTB.Location = new System.Drawing.Point(147, 96);
             this.EmailTB.Name = "EmailTB";
             this.EmailTB.Size = new System.Drawing.Size(100, 20);
-            this.EmailTB.TabIndex = 3;
+            this.EmailTB.TabIndex = 1;
             // 
             // PasswordTB
             // 
             this.PasswordTB.Location = new System.Drawing.Point(147, 137);
             this.PasswordTB.Name = "PasswordTB";
             this.PasswordTB.Size = new System.Drawing.Size(100, 20);
-            this.PasswordTB.TabIndex = 4;
+            this.PasswordTB.TabIndex = 2;
             // 
             // linkLabel1
             // 
@@ -89,7 +89,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(165, 215);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(92, 13);
-            this.linkLabel1.TabIndex = 5;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot Password?";
             // 
@@ -99,7 +99,7 @@
             this.linkLabel3.Location = new System.Drawing.Point(165, 239);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(81, 13);
-            this.linkLabel3.TabIndex = 8;
+            this.linkLabel3.TabIndex = 5;
             this.linkLabel3.TabStop = true;
             this.linkLabel3.Text = "Create Account";
             this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);

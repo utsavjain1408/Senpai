@@ -25,7 +25,7 @@ namespace Senpai__Organization_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CreateStaffroom ob = new CreateStaffroom();
+            CreateStaffroom ob = new CreateStaffroom(x);
             ob.Show();
         }
 
