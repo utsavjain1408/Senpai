@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DashBoard));
             this.CreateStaffroomButton = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.StaffRoomListComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.ViewButton = new System.Windows.Forms.Button();
             this.ViewDetailButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -48,13 +48,13 @@
             this.CreateStaffroomButton.UseVisualStyleBackColor = true;
             this.CreateStaffroomButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // StaffRoomListComboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(40, 147);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.StaffRoomListComboBox.FormattingEnabled = true;
+            this.StaffRoomListComboBox.Location = new System.Drawing.Point(40, 147);
+            this.StaffRoomListComboBox.Name = "StaffRoomListComboBox";
+            this.StaffRoomListComboBox.Size = new System.Drawing.Size(121, 21);
+            this.StaffRoomListComboBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -65,14 +65,14 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Your StaffRooms";
             // 
-            // button3
+            // ViewButton
             // 
-            this.button3.Location = new System.Drawing.Point(63, 185);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "View";
-            this.button3.UseVisualStyleBackColor = true;
+            this.ViewButton.Location = new System.Drawing.Point(63, 185);
+            this.ViewButton.Name = "ViewButton";
+            this.ViewButton.Size = new System.Drawing.Size(75, 23);
+            this.ViewButton.TabIndex = 4;
+            this.ViewButton.Text = "View";
+            this.ViewButton.UseVisualStyleBackColor = true;
             // 
             // ViewDetailButton
             // 
@@ -101,9 +101,9 @@
             this.ClientSize = new System.Drawing.Size(383, 298);
             this.Controls.Add(this.ViewDetailButton);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.ViewButton);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.StaffRoomListComboBox);
             this.Controls.Add(this.CreateStaffroomButton);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DashBoard";
@@ -118,9 +118,9 @@
         #endregion
 
         private System.Windows.Forms.Button CreateStaffroomButton;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox StaffRoomListComboBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button ViewButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button ViewDetailButton;
     }

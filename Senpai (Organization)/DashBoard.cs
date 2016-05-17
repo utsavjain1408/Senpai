@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace Senpai__Organization_
 {
     public partial class DashBoard : Form
     {   SessionData x = new SessionData();
-
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
         public DashBoard()
         {
             InitializeComponent();
@@ -31,6 +33,15 @@ namespace Senpai__Organization_
 
         private void DashBoard_Load(object sender, EventArgs e)
         {
+            SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where CreatingOrganization ="+x.SenpaiId+"", conn);
+            conn.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            adapt.Fill(ds);
+            conn.Close();
+            StaffRoomListComboBox.DataSource = ds.Tables[0];
+            StaffRoomListComboBox.ValueMember = "StaffRoomID";
+            StaffRoomListComboBox.DisplayMember = "Name";
 
         }
 
