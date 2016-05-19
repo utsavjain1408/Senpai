@@ -117,6 +117,7 @@
     <Compile Include="StaffRoom.Designer.cs">
       <DependentUpon>StaffRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffRoomSessionVariables.cs" />
     <Compile Include="ViewDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +155,19 @@
     <EmbeddedResource Include="ViewDetails.resx">
       <DependentUpon>ViewDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\ConfirmSignUp.datasource" />
+    <None Include="Properties\DataSources\CreateStaffroom.datasource" />
+    <None Include="Properties\DataSources\DashBoard.datasource" />
+    <None Include="Properties\DataSources\DataPassing.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\SenpaiOrganization.datasource" />
+    <None Include="Properties\DataSources\Senpai__Organization_.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Senpai__Organization_.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\SessionData.datasource" />
+    <None Include="Properties\DataSources\SignUpdata.datasource" />
+    <None Include="Properties\DataSources\SignUpForm.datasource" />
+    <None Include="Properties\DataSources\StaffRoom.datasource" />
+    <None Include="Properties\DataSources\ViewDetails.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

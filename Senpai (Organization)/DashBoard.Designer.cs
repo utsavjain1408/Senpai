@@ -55,6 +55,7 @@
             this.StaffRoomListComboBox.Name = "StaffRoomListComboBox";
             this.StaffRoomListComboBox.Size = new System.Drawing.Size(121, 21);
             this.StaffRoomListComboBox.TabIndex = 1;
+            this.StaffRoomListComboBox.SelectedIndexChanged += new System.EventHandler(this.StaffRoomListComboBox_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -73,6 +74,7 @@
             this.ViewButton.TabIndex = 4;
             this.ViewButton.Text = "View";
             this.ViewButton.UseVisualStyleBackColor = true;
+            this.ViewButton.Click += new System.EventHandler(this.ViewButton_Click);
             // 
             // ViewDetailButton
             // 
