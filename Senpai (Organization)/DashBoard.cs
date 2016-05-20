@@ -82,5 +82,27 @@ namespace Senpai__Organization_
         {
 
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                object a = StaffRoomListComboBox.SelectedValue;
+
+                SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where StaffRoomID =" + a, conn);
+                conn.Open();
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
+                conn.Close();
+                StaffRoomListComboBox.DataSource = ds.Tables[0];
+                StaffRoomListComboBox.ValueMember = "StaffRoomID";
+                StaffRoomListComboBox.DisplayMember = "Name";
+            }
+            catch
+            {
+                MessageBox.Show("We are suffering from some technical difficulty. Kindly try again after some time");
+            }
+        }
     }
 }

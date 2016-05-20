@@ -50,15 +50,20 @@
             this.PublishMemoButton = new System.Windows.Forms.Button();
             this.DetailsLabel = new System.Windows.Forms.Label();
             this.SubjectLabel = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.MemoDetailRTB = new System.Windows.Forms.RichTextBox();
+            this.MemoSubjectTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.SendButton = new System.Windows.Forms.Button();
             this.LMessage = new System.Windows.Forms.Label();
             this.TBMessage = new System.Windows.Forms.TextBox();
             this.QuorumDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.RequestPanel = new System.Windows.Forms.Panel();
+            this.ReqConfirmB = new System.Windows.Forms.Button();
+            this.ReqCancelB = new System.Windows.Forms.Button();
+            this.RemovePanel = new System.Windows.Forms.Panel();
+            this.ConfirmRemoveButton = new System.Windows.Forms.Button();
+            this.NoButton = new System.Windows.Forms.Button();
             this.BAdd = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.AddMemberComboBox = new System.Windows.Forms.ComboBox();
@@ -67,12 +72,6 @@
             this.LRemove = new System.Windows.Forms.Label();
             this.LMenbers = new System.Windows.Forms.Label();
             this.MemberDataGridView = new System.Windows.Forms.DataGridView();
-            this.RemovePanel = new System.Windows.Forms.Panel();
-            this.NoButton = new System.Windows.Forms.Button();
-            this.ConfirmRemoveButton = new System.Windows.Forms.Button();
-            this.RequestPanel = new System.Windows.Forms.Panel();
-            this.ReqConfirmB = new System.Windows.Forms.Button();
-            this.ReqCancelB = new System.Windows.Forms.Button();
             this.TabRequests.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.EditPanel.SuspendLayout();
@@ -82,9 +81,9 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuorumDataGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberDataGridView)).BeginInit();
-            this.RemovePanel.SuspendLayout();
             this.RequestPanel.SuspendLayout();
+            this.RemovePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.MemberDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // TabRequests
@@ -248,7 +247,6 @@
             // 
             this.tabPage3.Controls.Add(this.MemoDataGridView);
             this.tabPage3.Controls.Add(this.panel1);
-            this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -265,7 +263,7 @@
             this.MemoDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.MemoDataGridView.Location = new System.Drawing.Point(6, 6);
             this.MemoDataGridView.Name = "MemoDataGridView";
-            this.MemoDataGridView.Size = new System.Drawing.Size(362, 145);
+            this.MemoDataGridView.Size = new System.Drawing.Size(362, 174);
             this.MemoDataGridView.TabIndex = 6;
             this.MemoDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -274,8 +272,8 @@
             this.panel1.Controls.Add(this.PublishMemoButton);
             this.panel1.Controls.Add(this.DetailsLabel);
             this.panel1.Controls.Add(this.SubjectLabel);
-            this.panel1.Controls.Add(this.richTextBox2);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.MemoDetailRTB);
+            this.panel1.Controls.Add(this.MemoSubjectTextBox);
             this.panel1.Location = new System.Drawing.Point(26, 186);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 185);
@@ -289,6 +287,7 @@
             this.PublishMemoButton.TabIndex = 8;
             this.PublishMemoButton.Text = "Publish";
             this.PublishMemoButton.UseVisualStyleBackColor = true;
+            this.PublishMemoButton.Click += new System.EventHandler(this.PublishMemoButton_Click);
             // 
             // DetailsLabel
             // 
@@ -308,29 +307,20 @@
             this.SubjectLabel.TabIndex = 5;
             this.SubjectLabel.Text = "Subject";
             // 
-            // richTextBox2
+            // MemoDetailRTB
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(122, 64);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(172, 79);
-            this.richTextBox2.TabIndex = 4;
-            this.richTextBox2.Text = "";
+            this.MemoDetailRTB.Location = new System.Drawing.Point(122, 64);
+            this.MemoDetailRTB.Name = "MemoDetailRTB";
+            this.MemoDetailRTB.Size = new System.Drawing.Size(172, 79);
+            this.MemoDetailRTB.TabIndex = 4;
+            this.MemoDetailRTB.Text = "";
             // 
-            // textBox4
+            // MemoSubjectTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(122, 29);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(139, 157);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add Memo";
-            this.button1.UseVisualStyleBackColor = true;
+            this.MemoSubjectTextBox.Location = new System.Drawing.Point(122, 29);
+            this.MemoSubjectTextBox.Name = "MemoSubjectTextBox";
+            this.MemoSubjectTextBox.Size = new System.Drawing.Size(172, 20);
+            this.MemoSubjectTextBox.TabIndex = 2;
             // 
             // tabPage2
             // 
@@ -378,6 +368,7 @@
             this.QuorumDataGridView.Name = "QuorumDataGridView";
             this.QuorumDataGridView.Size = new System.Drawing.Size(341, 247);
             this.QuorumDataGridView.TabIndex = 0;
+            this.QuorumDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.QuorumDataGridView_CellContentClick);
             // 
             // tabPage4
             // 
@@ -398,6 +389,66 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Members";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // RequestPanel
+            // 
+            this.RequestPanel.Controls.Add(this.ReqConfirmB);
+            this.RequestPanel.Controls.Add(this.ReqCancelB);
+            this.RequestPanel.Location = new System.Drawing.Point(174, 299);
+            this.RequestPanel.Name = "RequestPanel";
+            this.RequestPanel.Size = new System.Drawing.Size(197, 28);
+            this.RequestPanel.TabIndex = 9;
+            this.RequestPanel.Visible = false;
+            // 
+            // ReqConfirmB
+            // 
+            this.ReqConfirmB.Location = new System.Drawing.Point(112, 2);
+            this.ReqConfirmB.Name = "ReqConfirmB";
+            this.ReqConfirmB.Size = new System.Drawing.Size(75, 23);
+            this.ReqConfirmB.TabIndex = 1;
+            this.ReqConfirmB.Text = "Confirm";
+            this.ReqConfirmB.UseVisualStyleBackColor = true;
+            this.ReqConfirmB.Click += new System.EventHandler(this.ReqConfirmB_Click);
+            // 
+            // ReqCancelB
+            // 
+            this.ReqCancelB.Location = new System.Drawing.Point(3, 2);
+            this.ReqCancelB.Name = "ReqCancelB";
+            this.ReqCancelB.Size = new System.Drawing.Size(75, 23);
+            this.ReqCancelB.TabIndex = 0;
+            this.ReqCancelB.Text = "Cancel";
+            this.ReqCancelB.UseVisualStyleBackColor = true;
+            this.ReqCancelB.Click += new System.EventHandler(this.ReqCancelB_Click);
+            // 
+            // RemovePanel
+            // 
+            this.RemovePanel.Controls.Add(this.ConfirmRemoveButton);
+            this.RemovePanel.Controls.Add(this.NoButton);
+            this.RemovePanel.Location = new System.Drawing.Point(181, 238);
+            this.RemovePanel.Name = "RemovePanel";
+            this.RemovePanel.Size = new System.Drawing.Size(197, 28);
+            this.RemovePanel.TabIndex = 8;
+            this.RemovePanel.Visible = false;
+            // 
+            // ConfirmRemoveButton
+            // 
+            this.ConfirmRemoveButton.Location = new System.Drawing.Point(112, 2);
+            this.ConfirmRemoveButton.Name = "ConfirmRemoveButton";
+            this.ConfirmRemoveButton.Size = new System.Drawing.Size(75, 23);
+            this.ConfirmRemoveButton.TabIndex = 1;
+            this.ConfirmRemoveButton.Text = "Confirm";
+            this.ConfirmRemoveButton.UseVisualStyleBackColor = true;
+            this.ConfirmRemoveButton.Click += new System.EventHandler(this.ConfirmRemoveButton_Click);
+            // 
+            // NoButton
+            // 
+            this.NoButton.Location = new System.Drawing.Point(3, 2);
+            this.NoButton.Name = "NoButton";
+            this.NoButton.Size = new System.Drawing.Size(75, 23);
+            this.NoButton.TabIndex = 0;
+            this.NoButton.Text = "Cancel";
+            this.NoButton.UseVisualStyleBackColor = true;
+            this.NoButton.Click += new System.EventHandler(this.NoButton_Click);
             // 
             // BAdd
             // 
@@ -470,66 +521,6 @@
             this.MemberDataGridView.Size = new System.Drawing.Size(362, 152);
             this.MemberDataGridView.TabIndex = 0;
             // 
-            // RemovePanel
-            // 
-            this.RemovePanel.Controls.Add(this.ConfirmRemoveButton);
-            this.RemovePanel.Controls.Add(this.NoButton);
-            this.RemovePanel.Location = new System.Drawing.Point(181, 238);
-            this.RemovePanel.Name = "RemovePanel";
-            this.RemovePanel.Size = new System.Drawing.Size(197, 28);
-            this.RemovePanel.TabIndex = 8;
-            this.RemovePanel.Visible = false;
-            // 
-            // NoButton
-            // 
-            this.NoButton.Location = new System.Drawing.Point(3, 2);
-            this.NoButton.Name = "NoButton";
-            this.NoButton.Size = new System.Drawing.Size(75, 23);
-            this.NoButton.TabIndex = 0;
-            this.NoButton.Text = "Cancel";
-            this.NoButton.UseVisualStyleBackColor = true;
-            this.NoButton.Click += new System.EventHandler(this.NoButton_Click);
-            // 
-            // ConfirmRemoveButton
-            // 
-            this.ConfirmRemoveButton.Location = new System.Drawing.Point(112, 2);
-            this.ConfirmRemoveButton.Name = "ConfirmRemoveButton";
-            this.ConfirmRemoveButton.Size = new System.Drawing.Size(75, 23);
-            this.ConfirmRemoveButton.TabIndex = 1;
-            this.ConfirmRemoveButton.Text = "Confirm";
-            this.ConfirmRemoveButton.UseVisualStyleBackColor = true;
-            this.ConfirmRemoveButton.Click += new System.EventHandler(this.ConfirmRemoveButton_Click);
-            // 
-            // RequestPanel
-            // 
-            this.RequestPanel.Controls.Add(this.ReqConfirmB);
-            this.RequestPanel.Controls.Add(this.ReqCancelB);
-            this.RequestPanel.Location = new System.Drawing.Point(174, 299);
-            this.RequestPanel.Name = "RequestPanel";
-            this.RequestPanel.Size = new System.Drawing.Size(197, 28);
-            this.RequestPanel.TabIndex = 9;
-            this.RequestPanel.Visible = false;
-            // 
-            // ReqConfirmB
-            // 
-            this.ReqConfirmB.Location = new System.Drawing.Point(112, 2);
-            this.ReqConfirmB.Name = "ReqConfirmB";
-            this.ReqConfirmB.Size = new System.Drawing.Size(75, 23);
-            this.ReqConfirmB.TabIndex = 1;
-            this.ReqConfirmB.Text = "Confirm";
-            this.ReqConfirmB.UseVisualStyleBackColor = true;
-            this.ReqConfirmB.Click += new System.EventHandler(this.ReqConfirmB_Click);
-            // 
-            // ReqCancelB
-            // 
-            this.ReqCancelB.Location = new System.Drawing.Point(3, 2);
-            this.ReqCancelB.Name = "ReqCancelB";
-            this.ReqCancelB.Size = new System.Drawing.Size(75, 23);
-            this.ReqCancelB.TabIndex = 0;
-            this.ReqCancelB.Text = "Cancel";
-            this.ReqCancelB.UseVisualStyleBackColor = true;
-            this.ReqCancelB.Click += new System.EventHandler(this.ReqCancelB_Click);
-            // 
             // StaffRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,9 +544,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.QuorumDataGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.MemberDataGridView)).EndInit();
-            this.RemovePanel.ResumeLayout(false);
             this.RequestPanel.ResumeLayout(false);
+            this.RemovePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.MemberDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,14 +565,13 @@
         private System.Windows.Forms.RichTextBox RTBDescription;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView MemoDataGridView;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button PublishMemoButton;
         private System.Windows.Forms.Label DetailsLabel;
         private System.Windows.Forms.Label SubjectLabel;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.RichTextBox MemoDetailRTB;
+        private System.Windows.Forms.TextBox MemoSubjectTextBox;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button SendButton;
         private System.Windows.Forms.Label LMessage;

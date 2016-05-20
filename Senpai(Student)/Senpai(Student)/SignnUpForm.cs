@@ -6,6 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
+
 
 namespace Senpai_Student_
 {
@@ -16,6 +19,7 @@ namespace Senpai_Student_
             InitializeComponent();
         }
         SignUpData ob = new SignUpData();
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -44,6 +48,40 @@ namespace Senpai_Student_
             else
             {
                 Gender = "Female";
+            }
+            bool flag = true;
+
+            if (flag)
+            {
+                SqlCommand cmd = new SqlCommand("Select * from Senpai_Student where Email=@username ", conn);
+                cmd.Parameters.AddWithValue("@username", TBEmail.Text);
+                try
+                {
+                    conn.Open();
+                    SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adapt.Fill(ds);
+                    conn.Close();
+                    int count = ds.Tables[0].Rows.Count;
+                    //If count is equal to 1, than show frmMain form
+                    MessageBox.Show(count.ToString());
+                    if (count == 1)
+                    {
+                        flag = false;
+                    }
+                    else
+                    {
+                        flag = true;
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("We are experiencing some technical difficulties. Please try againg after som time.");
+                }
+            }
+            if (flag == false)
+            {
+                Errors += "\nThis Email address is already registered. Kindly try a different Address.";
             }
             if (Errors == "")
             {

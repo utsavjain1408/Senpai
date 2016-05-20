@@ -237,11 +237,43 @@ namespace Senpai__Organization_
         {
             int ID = Int32.Parse(AddMemberComboBox.ValueMember.ToString());
             Object a = StaffRoomRequestTableDataSet.Tables[0].Rows[ID]["Email"];
+            SqlCommand AddMemberQuery = new SqlCommand("Select Email from StaffRoomRequestTable where RequestedStaffRoomID =" + sv.StafffRoomID + "", conn);
             SqlCommand CommandToAddMember = new SqlCommand("INSERT INTO StaffRoomMemberList (StaffRoomID, TeacherName, TeacherID) VALUES ('"+sv.StafffRoomID+"', '"+AddMemberComboBox.Text + "','"+AddMemberComboBox.SelectedValue + "')", conn);
 
             conn.Open();
             CommandToAddMember.ExecuteNonQuery();
             conn.Close();
+        }
+
+        private void QuorumDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void PublishMemoButton_Click(object sender, EventArgs e)
+        {
+            String Errors = "";
+            if (MemoDetailRTB.Text == "")
+            {
+               Errors+="Please Enter Memo Details!";
+            }
+            if (MemoSubjectTextBox.Text == "")
+            {
+                Errors+="Please Enter Subject!";
+            }
+            if (Errors != "")
+            {
+                MessageBox.Show(Errors);
+            }
+            else
+            {
+                SqlCommand AddMemoQuery = new SqlCommand("INSERT INTO StaffroomMemoTable (StaffRoomID,DataAndTime,Message,Subject)Values('"+sv.StafffRoomID+"','"+DateTime.Now+"','"+RTBDescription.Text+"','"+MemoSubjectTextBox.Text+"')",conn);
+                conn.Open();
+                AddMemoQuery.ExecuteNonQuery();
+                conn.Close();
+            }
+
+
         }
     }
 }

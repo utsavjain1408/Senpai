@@ -37,20 +37,26 @@
             this.LStream = new System.Windows.Forms.Label();
             this.BSubmit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.VName = new System.Windows.Forms.Label();
-            this.VEmail = new System.Windows.Forms.Label();
-            this.VPhone = new System.Windows.Forms.Label();
-            this.VGender = new System.Windows.Forms.Label();
-            this.VCollege = new System.Windows.Forms.Label();
-            this.VStream = new System.Windows.Forms.Label();
             this.PasswordPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.SubmitButton = new System.Windows.Forms.Button();
+            this.ConfirmPasswordTB = new System.Windows.Forms.TextBox();
+            this.PasswordTB = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AboutYourselfLabel = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.AboutYourselfRTB = new System.Windows.Forms.RichTextBox();
+            this.StreamTB = new System.Windows.Forms.TextBox();
+            this.CollegeTB = new System.Windows.Forms.TextBox();
+            this.GenderTB = new System.Windows.Forms.TextBox();
+            this.PhoneTB = new System.Windows.Forms.TextBox();
+            this.EmailTB = new System.Windows.Forms.TextBox();
+            this.NameTB = new System.Windows.Forms.TextBox();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.ConfirmButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PasswordPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // LName
@@ -109,9 +115,9 @@
             // 
             // BSubmit
             // 
-            this.BSubmit.Location = new System.Drawing.Point(94, 265);
+            this.BSubmit.Location = new System.Drawing.Point(224, 320);
             this.BSubmit.Name = "BSubmit";
-            this.BSubmit.Size = new System.Drawing.Size(75, 21);
+            this.BSubmit.Size = new System.Drawing.Size(75, 23);
             this.BSubmit.TabIndex = 6;
             this.BSubmit.Text = "Submit";
             this.BSubmit.UseVisualStyleBackColor = true;
@@ -127,74 +133,43 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // VName
-            // 
-            this.VName.AutoSize = true;
-            this.VName.Location = new System.Drawing.Point(164, 84);
-            this.VName.Name = "VName";
-            this.VName.Size = new System.Drawing.Size(0, 13);
-            this.VName.TabIndex = 8;
-            // 
-            // VEmail
-            // 
-            this.VEmail.AutoSize = true;
-            this.VEmail.Location = new System.Drawing.Point(164, 113);
-            this.VEmail.Name = "VEmail";
-            this.VEmail.Size = new System.Drawing.Size(0, 13);
-            this.VEmail.TabIndex = 9;
-            // 
-            // VPhone
-            // 
-            this.VPhone.AutoSize = true;
-            this.VPhone.Location = new System.Drawing.Point(164, 141);
-            this.VPhone.Name = "VPhone";
-            this.VPhone.Size = new System.Drawing.Size(0, 13);
-            this.VPhone.TabIndex = 10;
-            // 
-            // VGender
-            // 
-            this.VGender.AutoSize = true;
-            this.VGender.Location = new System.Drawing.Point(164, 167);
-            this.VGender.Name = "VGender";
-            this.VGender.Size = new System.Drawing.Size(0, 13);
-            this.VGender.TabIndex = 11;
-            // 
-            // VCollege
-            // 
-            this.VCollege.AutoSize = true;
-            this.VCollege.Location = new System.Drawing.Point(164, 196);
-            this.VCollege.Name = "VCollege";
-            this.VCollege.Size = new System.Drawing.Size(0, 13);
-            this.VCollege.TabIndex = 12;
-            // 
-            // VStream
-            // 
-            this.VStream.AutoSize = true;
-            this.VStream.Location = new System.Drawing.Point(164, 221);
-            this.VStream.Name = "VStream";
-            this.VStream.Size = new System.Drawing.Size(0, 13);
-            this.VStream.TabIndex = 13;
-            // 
             // PasswordPanel
             // 
             this.PasswordPanel.Controls.Add(this.SubmitButton);
-            this.PasswordPanel.Controls.Add(this.textBox2);
-            this.PasswordPanel.Controls.Add(this.textBox1);
+            this.PasswordPanel.Controls.Add(this.ConfirmPasswordTB);
+            this.PasswordPanel.Controls.Add(this.PasswordTB);
             this.PasswordPanel.Controls.Add(this.label2);
             this.PasswordPanel.Controls.Add(this.label1);
-            this.PasswordPanel.Location = new System.Drawing.Point(12, 292);
+            this.PasswordPanel.Location = new System.Drawing.Point(15, 378);
             this.PasswordPanel.Name = "PasswordPanel";
-            this.PasswordPanel.Size = new System.Drawing.Size(260, 121);
+            this.PasswordPanel.Size = new System.Drawing.Size(310, 121);
             this.PasswordPanel.TabIndex = 14;
             // 
-            // label1
+            // SubmitButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Password";
+            this.SubmitButton.Location = new System.Drawing.Point(97, 78);
+            this.SubmitButton.Name = "SubmitButton";
+            this.SubmitButton.Size = new System.Drawing.Size(92, 23);
+            this.SubmitButton.TabIndex = 4;
+            this.SubmitButton.Text = "Create Account";
+            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
+            // 
+            // ConfirmPasswordTB
+            // 
+            this.ConfirmPasswordTB.Location = new System.Drawing.Point(136, 52);
+            this.ConfirmPasswordTB.Name = "ConfirmPasswordTB";
+            this.ConfirmPasswordTB.PasswordChar = '*';
+            this.ConfirmPasswordTB.Size = new System.Drawing.Size(162, 20);
+            this.ConfirmPasswordTB.TabIndex = 3;
+            // 
+            // PasswordTB
+            // 
+            this.PasswordTB.Location = new System.Drawing.Point(136, 26);
+            this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.PasswordChar = '*';
+            this.PasswordTB.Size = new System.Drawing.Size(162, 20);
+            this.PasswordTB.TabIndex = 2;
             // 
             // label2
             // 
@@ -205,43 +180,121 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Confirm Password";
             // 
-            // textBox1
+            // label1
             // 
-            this.textBox1.Location = new System.Drawing.Point(136, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(21, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Password";
             // 
-            // textBox2
+            // AboutYourselfLabel
             // 
-            this.textBox2.Location = new System.Drawing.Point(136, 52);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.AboutYourselfLabel.AutoSize = true;
+            this.AboutYourselfLabel.Location = new System.Drawing.Point(54, 244);
+            this.AboutYourselfLabel.Name = "AboutYourselfLabel";
+            this.AboutYourselfLabel.Size = new System.Drawing.Size(76, 13);
+            this.AboutYourselfLabel.TabIndex = 15;
+            this.AboutYourselfLabel.Text = "About Yourself";
             // 
-            // SubmitButton
+            // panel1
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(82, 78);
-            this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Size = new System.Drawing.Size(92, 23);
-            this.SubmitButton.TabIndex = 4;
-            this.SubmitButton.Text = "Create Account";
-            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.AboutYourselfRTB);
+            this.panel1.Controls.Add(this.StreamTB);
+            this.panel1.Controls.Add(this.CollegeTB);
+            this.panel1.Controls.Add(this.GenderTB);
+            this.panel1.Controls.Add(this.PhoneTB);
+            this.panel1.Controls.Add(this.EmailTB);
+            this.panel1.Controls.Add(this.NameTB);
+            this.panel1.Enabled = false;
+            this.panel1.Location = new System.Drawing.Point(127, 69);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(189, 238);
+            this.panel1.TabIndex = 23;
+            // 
+            // AboutYourselfRTB
+            // 
+            this.AboutYourselfRTB.Location = new System.Drawing.Point(3, 172);
+            this.AboutYourselfRTB.Name = "AboutYourselfRTB";
+            this.AboutYourselfRTB.Size = new System.Drawing.Size(183, 61);
+            this.AboutYourselfRTB.TabIndex = 29;
+            this.AboutYourselfRTB.Text = "";
+            // 
+            // StreamTB
+            // 
+            this.StreamTB.Location = new System.Drawing.Point(3, 149);
+            this.StreamTB.Name = "StreamTB";
+            this.StreamTB.Size = new System.Drawing.Size(183, 20);
+            this.StreamTB.TabIndex = 28;
+            // 
+            // CollegeTB
+            // 
+            this.CollegeTB.Location = new System.Drawing.Point(3, 124);
+            this.CollegeTB.Name = "CollegeTB";
+            this.CollegeTB.Size = new System.Drawing.Size(183, 20);
+            this.CollegeTB.TabIndex = 27;
+            // 
+            // GenderTB
+            // 
+            this.GenderTB.Location = new System.Drawing.Point(3, 95);
+            this.GenderTB.Name = "GenderTB";
+            this.GenderTB.Size = new System.Drawing.Size(183, 20);
+            this.GenderTB.TabIndex = 26;
+            // 
+            // PhoneTB
+            // 
+            this.PhoneTB.Location = new System.Drawing.Point(3, 69);
+            this.PhoneTB.Name = "PhoneTB";
+            this.PhoneTB.Size = new System.Drawing.Size(183, 20);
+            this.PhoneTB.TabIndex = 25;
+            // 
+            // EmailTB
+            // 
+            this.EmailTB.Location = new System.Drawing.Point(3, 41);
+            this.EmailTB.Name = "EmailTB";
+            this.EmailTB.Size = new System.Drawing.Size(183, 20);
+            this.EmailTB.TabIndex = 24;
+            // 
+            // NameTB
+            // 
+            this.NameTB.Location = new System.Drawing.Point(3, 12);
+            this.NameTB.Name = "NameTB";
+            this.NameTB.Size = new System.Drawing.Size(183, 20);
+            this.NameTB.TabIndex = 23;
+            // 
+            // EditButton
+            // 
+            this.EditButton.Location = new System.Drawing.Point(130, 349);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(75, 23);
+            this.EditButton.TabIndex = 24;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Visible = false;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // ConfirmButton
+            // 
+            this.ConfirmButton.Location = new System.Drawing.Point(130, 320);
+            this.ConfirmButton.Name = "ConfirmButton";
+            this.ConfirmButton.Size = new System.Drawing.Size(75, 23);
+            this.ConfirmButton.TabIndex = 25;
+            this.ConfirmButton.Text = "Confirm";
+            this.ConfirmButton.UseVisualStyleBackColor = true;
+            this.ConfirmButton.Visible = false;
+            this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
             // SignUpFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 425);
+            this.ClientSize = new System.Drawing.Size(328, 541);
+            this.Controls.Add(this.ConfirmButton);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.AboutYourselfLabel);
             this.Controls.Add(this.PasswordPanel);
-            this.Controls.Add(this.VStream);
-            this.Controls.Add(this.VCollege);
-            this.Controls.Add(this.VGender);
-            this.Controls.Add(this.VPhone);
-            this.Controls.Add(this.VEmail);
-            this.Controls.Add(this.VName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.BSubmit);
             this.Controls.Add(this.LStream);
@@ -257,6 +310,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PasswordPanel.ResumeLayout(false);
             this.PasswordPanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -272,17 +327,22 @@
         private System.Windows.Forms.Label LStream;
         private System.Windows.Forms.Button BSubmit;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label VName;
-        private System.Windows.Forms.Label VEmail;
-        private System.Windows.Forms.Label VPhone;
-        private System.Windows.Forms.Label VGender;
-        private System.Windows.Forms.Label VCollege;
-        private System.Windows.Forms.Label VStream;
         private System.Windows.Forms.Panel PasswordPanel;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox ConfirmPasswordTB;
+        private System.Windows.Forms.TextBox PasswordTB;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SubmitButton;
+        private System.Windows.Forms.Label AboutYourselfLabel;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RichTextBox AboutYourselfRTB;
+        private System.Windows.Forms.TextBox StreamTB;
+        private System.Windows.Forms.TextBox CollegeTB;
+        private System.Windows.Forms.TextBox GenderTB;
+        private System.Windows.Forms.TextBox PhoneTB;
+        private System.Windows.Forms.TextBox EmailTB;
+        private System.Windows.Forms.TextBox NameTB;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Button ConfirmButton;
     }
 }

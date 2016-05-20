@@ -27,22 +27,63 @@ namespace Senpai_Student_
 
         private void BSubmit_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Select Password Now!!");
-            PasswordPanel.Visible = true;
-            PasswordPanel.Enabled = true;
+            EditButton.Visible = true;
+            ConfirmButton.Visible = true;
+            SubmitButton.Visible = false;
+            
         }
 
         private void SignUpFinal_Load(object sender, EventArgs e)
         {
-            VName.Text = tempdata.Name;
-            VPhone.Text = tempdata.PhoneNumber;
-            VStream.Text = tempdata.Stream;
-            VEmail.Text = tempdata.Email;
-            VGender.Text = tempdata.Gender;
-            VCollege.Text = tempdata.College;
+            ConfirmPasswordTB.Text = "";
+            PasswordTB.Text = "";
+            NameTB.Text = tempdata.Name;
+            PhoneTB.Text = tempdata.PhoneNumber;
+            StreamTB.Text = tempdata.Stream;
+            EmailTB.Text = tempdata.Email;
+            GenderTB.Text = tempdata.Gender;
+            CollegeTB.Text = tempdata.College;
+            StreamTB.Text = tempdata.Stream;
+            AboutYourselfRTB.Text = tempdata.AboutYourself;
             PasswordPanel.Visible = false;
             PasswordPanel.Enabled = false;
 
+        }
+
+        private void EditButton_Click(object sender, EventArgs e)
+        {
+            SubmitButton.Visible = true;
+            EditButton.Visible = false;
+            ConfirmButton.Visible = false;
+        }
+
+        private void ConfirmButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Select Password!");
+            PasswordPanel.Visible = true;
+            PasswordPanel.Enabled = true;
+        }
+
+        private void SubmitButton_Click(object sender, EventArgs e)
+        {
+            string Errors = "";
+            if (PasswordTB.Text != ConfirmPasswordTB.Text)
+            {
+                Errors += "Password and Confirm Password do not match!\n";
+            }
+            if (PasswordTB.Text.Length <= 6)
+            {
+                Errors += "\nPassword is too short.\n";
+            }
+            if (Errors != "")
+            {
+                MessageBox.Show(Errors);
+            }
+            else
+            {
+
+            }
+            
         }
     }
 }

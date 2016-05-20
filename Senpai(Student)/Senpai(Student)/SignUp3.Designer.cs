@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp3));
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.CollegeLabel = new System.Windows.Forms.Label();
             this.LCity = new System.Windows.Forms.Label();
             this.TBCity = new System.Windows.Forms.TextBox();
-            this.CBCollege = new System.Windows.Forms.ComboBox();
             this.BFinish = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.PanelAddCollege = new System.Windows.Forms.Panel();
             this.TBCollege = new System.Windows.Forms.TextBox();
-            this.LNewCollegeName = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PanelAddCollege.SuspendLayout();
+            this.StreamLabel = new System.Windows.Forms.Label();
+            this.StreamTextBox = new System.Windows.Forms.TextBox();
+            this.AboutYourselfLabel = new System.Windows.Forms.Label();
+            this.AboutYourselfRichTextBox = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,14 +53,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Let\'s find your College";
             // 
-            // label2
+            // CollegeLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 148);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Search College";
+            this.CollegeLabel.AutoSize = true;
+            this.CollegeLabel.Location = new System.Drawing.Point(43, 148);
+            this.CollegeLabel.Name = "CollegeLabel";
+            this.CollegeLabel.Size = new System.Drawing.Size(42, 13);
+            this.CollegeLabel.TabIndex = 1;
+            this.CollegeLabel.Text = "College";
             // 
             // LCity
             // 
@@ -79,20 +79,12 @@
             this.TBCity.Size = new System.Drawing.Size(137, 20);
             this.TBCity.TabIndex = 4;
             // 
-            // CBCollege
-            // 
-            this.CBCollege.FormattingEnabled = true;
-            this.CBCollege.Location = new System.Drawing.Point(154, 148);
-            this.CBCollege.Name = "CBCollege";
-            this.CBCollege.Size = new System.Drawing.Size(137, 21);
-            this.CBCollege.TabIndex = 5;
-            // 
             // BFinish
             // 
             this.BFinish.Location = new System.Drawing.Point(115, 295);
             this.BFinish.Name = "BFinish";
             this.BFinish.Size = new System.Drawing.Size(75, 23);
-            this.BFinish.TabIndex = 6;
+            this.BFinish.TabIndex = 8;
             this.BFinish.Text = "Finish";
             this.BFinish.UseVisualStyleBackColor = true;
             this.BFinish.Click += new System.EventHandler(this.BFinish_Click);
@@ -106,30 +98,12 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "Your are almost there!";
             // 
-            // PanelAddCollege
-            // 
-            this.PanelAddCollege.Controls.Add(this.TBCollege);
-            this.PanelAddCollege.Controls.Add(this.LNewCollegeName);
-            this.PanelAddCollege.Location = new System.Drawing.Point(54, 189);
-            this.PanelAddCollege.Name = "PanelAddCollege";
-            this.PanelAddCollege.Size = new System.Drawing.Size(237, 100);
-            this.PanelAddCollege.TabIndex = 8;
-            // 
             // TBCollege
             // 
-            this.TBCollege.Location = new System.Drawing.Point(120, 9);
+            this.TBCollege.Location = new System.Drawing.Point(154, 145);
             this.TBCollege.Name = "TBCollege";
-            this.TBCollege.Size = new System.Drawing.Size(100, 20);
-            this.TBCollege.TabIndex = 1;
-            // 
-            // LNewCollegeName
-            // 
-            this.LNewCollegeName.AutoSize = true;
-            this.LNewCollegeName.Location = new System.Drawing.Point(3, 12);
-            this.LNewCollegeName.Name = "LNewCollegeName";
-            this.LNewCollegeName.Size = new System.Drawing.Size(101, 13);
-            this.LNewCollegeName.TabIndex = 0;
-            this.LNewCollegeName.Text = "Enter College Name";
+            this.TBCollege.Size = new System.Drawing.Size(137, 20);
+            this.TBCollege.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -141,26 +115,60 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // StreamLabel
+            // 
+            this.StreamLabel.AutoSize = true;
+            this.StreamLabel.Location = new System.Drawing.Point(43, 174);
+            this.StreamLabel.Name = "StreamLabel";
+            this.StreamLabel.Size = new System.Drawing.Size(40, 13);
+            this.StreamLabel.TabIndex = 10;
+            this.StreamLabel.Text = "Stream";
+            // 
+            // StreamTextBox
+            // 
+            this.StreamTextBox.Location = new System.Drawing.Point(154, 171);
+            this.StreamTextBox.Name = "StreamTextBox";
+            this.StreamTextBox.Size = new System.Drawing.Size(137, 20);
+            this.StreamTextBox.TabIndex = 6;
+            // 
+            // AboutYourselfLabel
+            // 
+            this.AboutYourselfLabel.AutoSize = true;
+            this.AboutYourselfLabel.Location = new System.Drawing.Point(45, 199);
+            this.AboutYourselfLabel.Name = "AboutYourselfLabel";
+            this.AboutYourselfLabel.Size = new System.Drawing.Size(76, 13);
+            this.AboutYourselfLabel.TabIndex = 12;
+            this.AboutYourselfLabel.Text = "About Yourself";
+            // 
+            // AboutYourselfRichTextBox
+            // 
+            this.AboutYourselfRichTextBox.Location = new System.Drawing.Point(154, 199);
+            this.AboutYourselfRichTextBox.Name = "AboutYourselfRichTextBox";
+            this.AboutYourselfRichTextBox.Size = new System.Drawing.Size(137, 56);
+            this.AboutYourselfRichTextBox.TabIndex = 7;
+            this.AboutYourselfRichTextBox.Text = "";
+            // 
             // SignUp3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 352);
+            this.Controls.Add(this.AboutYourselfRichTextBox);
+            this.Controls.Add(this.AboutYourselfLabel);
+            this.Controls.Add(this.StreamTextBox);
+            this.Controls.Add(this.StreamLabel);
+            this.Controls.Add(this.TBCollege);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.PanelAddCollege);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.BFinish);
-            this.Controls.Add(this.CBCollege);
             this.Controls.Add(this.TBCity);
             this.Controls.Add(this.LCity);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.CollegeLabel);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SignUp3";
             this.Text = "Senpai For Students";
             this.Load += new System.EventHandler(this.SignUp3_Load);
-            this.PanelAddCollege.ResumeLayout(false);
-            this.PanelAddCollege.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,15 +178,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label CollegeLabel;
         private System.Windows.Forms.Label LCity;
         private System.Windows.Forms.TextBox TBCity;
-        private System.Windows.Forms.ComboBox CBCollege;
         private System.Windows.Forms.Button BFinish;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel PanelAddCollege;
         private System.Windows.Forms.TextBox TBCollege;
-        private System.Windows.Forms.Label LNewCollegeName;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label StreamLabel;
+        private System.Windows.Forms.TextBox StreamTextBox;
+        private System.Windows.Forms.Label AboutYourselfLabel;
+        private System.Windows.Forms.RichTextBox AboutYourselfRichTextBox;
     }
 }
