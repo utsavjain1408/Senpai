@@ -11,11 +11,16 @@ namespace Senpai_Student_
 {
     public partial class Home : Form
     {
+        SessionValues sv;
         public Home()
         {
             InitializeComponent();
         }
-
+        public Home(SessionValues temp)
+        {
+            InitializeComponent();
+            sv = temp;
+        }
         private void Home_Load(object sender, EventArgs e)
         {
 
@@ -33,7 +38,7 @@ namespace Senpai_Student_
 
         private void ButtonFindCla_Click(object sender, EventArgs e)
         {
-            FindClassroom ob = new FindClassroom();
+            FindClassroom ob = new FindClassroom(sv);
             ob.Show();
 
         }
@@ -46,7 +51,7 @@ namespace Senpai_Student_
 
         private void ButtonViewInfo_Click(object sender, EventArgs e)
         {
-            ViewInfo ob = new ViewInfo();
+            ViewInfo ob = new ViewInfo(sv);
             ob.Show();
         }
     }

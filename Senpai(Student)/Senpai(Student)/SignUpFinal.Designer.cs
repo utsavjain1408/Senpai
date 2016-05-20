@@ -44,7 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.AboutYourselfLabel = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.DetailsPanel = new System.Windows.Forms.Panel();
             this.AboutYourselfRTB = new System.Windows.Forms.RichTextBox();
             this.StreamTB = new System.Windows.Forms.TextBox();
             this.CollegeTB = new System.Windows.Forms.TextBox();
@@ -54,9 +54,12 @@
             this.NameTB = new System.Windows.Forms.TextBox();
             this.EditButton = new System.Windows.Forms.Button();
             this.ConfirmButton = new System.Windows.Forms.Button();
+            this.LoadingLabel = new System.Windows.Forms.Label();
+            this.CityTB = new System.Windows.Forms.TextBox();
+            this.CityLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.PasswordPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.DetailsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // LName
@@ -115,7 +118,7 @@
             // 
             // BSubmit
             // 
-            this.BSubmit.Location = new System.Drawing.Point(224, 320);
+            this.BSubmit.Location = new System.Drawing.Point(224, 347);
             this.BSubmit.Name = "BSubmit";
             this.BSubmit.Size = new System.Drawing.Size(75, 23);
             this.BSubmit.TabIndex = 6;
@@ -135,24 +138,24 @@
             // 
             // PasswordPanel
             // 
-            this.PasswordPanel.Controls.Add(this.SubmitButton);
             this.PasswordPanel.Controls.Add(this.ConfirmPasswordTB);
             this.PasswordPanel.Controls.Add(this.PasswordTB);
             this.PasswordPanel.Controls.Add(this.label2);
             this.PasswordPanel.Controls.Add(this.label1);
-            this.PasswordPanel.Location = new System.Drawing.Point(15, 378);
+            this.PasswordPanel.Location = new System.Drawing.Point(15, 405);
             this.PasswordPanel.Name = "PasswordPanel";
             this.PasswordPanel.Size = new System.Drawing.Size(310, 121);
             this.PasswordPanel.TabIndex = 14;
             // 
             // SubmitButton
             // 
-            this.SubmitButton.Location = new System.Drawing.Point(97, 78);
+            this.SubmitButton.Location = new System.Drawing.Point(39, 538);
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Size = new System.Drawing.Size(92, 23);
             this.SubmitButton.TabIndex = 4;
             this.SubmitButton.Text = "Create Account";
             this.SubmitButton.UseVisualStyleBackColor = true;
+            this.SubmitButton.Visible = false;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
             // 
             // ConfirmPasswordTB
@@ -192,30 +195,31 @@
             // AboutYourselfLabel
             // 
             this.AboutYourselfLabel.AutoSize = true;
-            this.AboutYourselfLabel.Location = new System.Drawing.Point(54, 244);
+            this.AboutYourselfLabel.Location = new System.Drawing.Point(54, 280);
             this.AboutYourselfLabel.Name = "AboutYourselfLabel";
             this.AboutYourselfLabel.Size = new System.Drawing.Size(76, 13);
             this.AboutYourselfLabel.TabIndex = 15;
             this.AboutYourselfLabel.Text = "About Yourself";
             // 
-            // panel1
+            // DetailsPanel
             // 
-            this.panel1.Controls.Add(this.AboutYourselfRTB);
-            this.panel1.Controls.Add(this.StreamTB);
-            this.panel1.Controls.Add(this.CollegeTB);
-            this.panel1.Controls.Add(this.GenderTB);
-            this.panel1.Controls.Add(this.PhoneTB);
-            this.panel1.Controls.Add(this.EmailTB);
-            this.panel1.Controls.Add(this.NameTB);
-            this.panel1.Enabled = false;
-            this.panel1.Location = new System.Drawing.Point(127, 69);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 238);
-            this.panel1.TabIndex = 23;
+            this.DetailsPanel.Controls.Add(this.CityTB);
+            this.DetailsPanel.Controls.Add(this.AboutYourselfRTB);
+            this.DetailsPanel.Controls.Add(this.StreamTB);
+            this.DetailsPanel.Controls.Add(this.CollegeTB);
+            this.DetailsPanel.Controls.Add(this.GenderTB);
+            this.DetailsPanel.Controls.Add(this.PhoneTB);
+            this.DetailsPanel.Controls.Add(this.EmailTB);
+            this.DetailsPanel.Controls.Add(this.NameTB);
+            this.DetailsPanel.Enabled = false;
+            this.DetailsPanel.Location = new System.Drawing.Point(127, 69);
+            this.DetailsPanel.Name = "DetailsPanel";
+            this.DetailsPanel.Size = new System.Drawing.Size(189, 272);
+            this.DetailsPanel.TabIndex = 23;
             // 
             // AboutYourselfRTB
             // 
-            this.AboutYourselfRTB.Location = new System.Drawing.Point(3, 172);
+            this.AboutYourselfRTB.Location = new System.Drawing.Point(3, 208);
             this.AboutYourselfRTB.Name = "AboutYourselfRTB";
             this.AboutYourselfRTB.Size = new System.Drawing.Size(183, 61);
             this.AboutYourselfRTB.TabIndex = 29;
@@ -251,6 +255,7 @@
             // 
             // EmailTB
             // 
+            this.EmailTB.Enabled = false;
             this.EmailTB.Location = new System.Drawing.Point(3, 41);
             this.EmailTB.Name = "EmailTB";
             this.EmailTB.Size = new System.Drawing.Size(183, 20);
@@ -258,6 +263,7 @@
             // 
             // NameTB
             // 
+            this.NameTB.Enabled = false;
             this.NameTB.Location = new System.Drawing.Point(3, 12);
             this.NameTB.Name = "NameTB";
             this.NameTB.Size = new System.Drawing.Size(183, 20);
@@ -265,7 +271,7 @@
             // 
             // EditButton
             // 
-            this.EditButton.Location = new System.Drawing.Point(130, 349);
+            this.EditButton.Location = new System.Drawing.Point(130, 376);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(75, 23);
             this.EditButton.TabIndex = 24;
@@ -276,7 +282,7 @@
             // 
             // ConfirmButton
             // 
-            this.ConfirmButton.Location = new System.Drawing.Point(130, 320);
+            this.ConfirmButton.Location = new System.Drawing.Point(130, 347);
             this.ConfirmButton.Name = "ConfirmButton";
             this.ConfirmButton.Size = new System.Drawing.Size(75, 23);
             this.ConfirmButton.TabIndex = 25;
@@ -285,14 +291,45 @@
             this.ConfirmButton.Visible = false;
             this.ConfirmButton.Click += new System.EventHandler(this.ConfirmButton_Click);
             // 
+            // LoadingLabel
+            // 
+            this.LoadingLabel.AutoSize = true;
+            this.LoadingLabel.Font = new System.Drawing.Font("Segoe Script", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadingLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.LoadingLabel.Location = new System.Drawing.Point(189, 533);
+            this.LoadingLabel.Name = "LoadingLabel";
+            this.LoadingLabel.Size = new System.Drawing.Size(101, 30);
+            this.LoadingLabel.TabIndex = 26;
+            this.LoadingLabel.Text = "Loading!";
+            this.LoadingLabel.Visible = false;
+            // 
+            // CityTB
+            // 
+            this.CityTB.Location = new System.Drawing.Point(3, 175);
+            this.CityTB.Name = "CityTB";
+            this.CityTB.Size = new System.Drawing.Size(183, 20);
+            this.CityTB.TabIndex = 30;
+            // 
+            // CityLabel
+            // 
+            this.CityLabel.AutoSize = true;
+            this.CityLabel.Location = new System.Drawing.Point(56, 247);
+            this.CityLabel.Name = "CityLabel";
+            this.CityLabel.Size = new System.Drawing.Size(24, 13);
+            this.CityLabel.TabIndex = 27;
+            this.CityLabel.Text = "City";
+            // 
             // SignUpFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(328, 541);
+            this.ClientSize = new System.Drawing.Size(335, 596);
+            this.Controls.Add(this.CityLabel);
+            this.Controls.Add(this.SubmitButton);
+            this.Controls.Add(this.LoadingLabel);
             this.Controls.Add(this.ConfirmButton);
             this.Controls.Add(this.EditButton);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.DetailsPanel);
             this.Controls.Add(this.AboutYourselfLabel);
             this.Controls.Add(this.PasswordPanel);
             this.Controls.Add(this.pictureBox1);
@@ -310,8 +347,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.PasswordPanel.ResumeLayout(false);
             this.PasswordPanel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.DetailsPanel.ResumeLayout(false);
+            this.DetailsPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,7 +371,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SubmitButton;
         private System.Windows.Forms.Label AboutYourselfLabel;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel DetailsPanel;
         private System.Windows.Forms.RichTextBox AboutYourselfRTB;
         private System.Windows.Forms.TextBox StreamTB;
         private System.Windows.Forms.TextBox CollegeTB;
@@ -344,5 +381,8 @@
         private System.Windows.Forms.TextBox NameTB;
         private System.Windows.Forms.Button EditButton;
         private System.Windows.Forms.Button ConfirmButton;
+        private System.Windows.Forms.Label LoadingLabel;
+        private System.Windows.Forms.TextBox CityTB;
+        private System.Windows.Forms.Label CityLabel;
     }
 }

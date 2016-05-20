@@ -32,11 +32,12 @@
             this.LWelcome = new System.Windows.Forms.Label();
             this.LEmail = new System.Windows.Forms.Label();
             this.LPassword = new System.Windows.Forms.Label();
-            this.TBEmail = new System.Windows.Forms.TextBox();
-            this.TBPassword = new System.Windows.Forms.TextBox();
+            this.EmailTB = new System.Windows.Forms.TextBox();
+            this.PasswordTB = new System.Windows.Forms.TextBox();
             this.BLogin = new System.Windows.Forms.Button();
             this.LSignUp = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LoadingLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,30 +62,30 @@
             // LPassword
             // 
             this.LPassword.AutoSize = true;
-            this.LPassword.Location = new System.Drawing.Point(59, 212);
+            this.LPassword.Location = new System.Drawing.Point(59, 196);
             this.LPassword.Name = "LPassword";
             this.LPassword.Size = new System.Drawing.Size(53, 13);
             this.LPassword.TabIndex = 2;
             this.LPassword.Text = "Password";
             // 
-            // TBEmail
+            // EmailTB
             // 
-            this.TBEmail.Location = new System.Drawing.Point(129, 162);
-            this.TBEmail.Name = "TBEmail";
-            this.TBEmail.Size = new System.Drawing.Size(100, 20);
-            this.TBEmail.TabIndex = 4;
+            this.EmailTB.Location = new System.Drawing.Point(129, 162);
+            this.EmailTB.Name = "EmailTB";
+            this.EmailTB.Size = new System.Drawing.Size(100, 20);
+            this.EmailTB.TabIndex = 4;
             // 
-            // TBPassword
+            // PasswordTB
             // 
-            this.TBPassword.Location = new System.Drawing.Point(129, 209);
-            this.TBPassword.Name = "TBPassword";
-            this.TBPassword.PasswordChar = '*';
-            this.TBPassword.Size = new System.Drawing.Size(100, 20);
-            this.TBPassword.TabIndex = 5;
+            this.PasswordTB.Location = new System.Drawing.Point(129, 193);
+            this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.PasswordChar = '*';
+            this.PasswordTB.Size = new System.Drawing.Size(100, 20);
+            this.PasswordTB.TabIndex = 5;
             // 
             // BLogin
             // 
-            this.BLogin.Location = new System.Drawing.Point(109, 274);
+            this.BLogin.Location = new System.Drawing.Point(106, 245);
             this.BLogin.Name = "BLogin";
             this.BLogin.Size = new System.Drawing.Size(75, 23);
             this.BLogin.TabIndex = 6;
@@ -95,7 +96,7 @@
             // LSignUp
             // 
             this.LSignUp.AutoSize = true;
-            this.LSignUp.Location = new System.Drawing.Point(115, 325);
+            this.LSignUp.Location = new System.Drawing.Point(115, 290);
             this.LSignUp.Name = "LSignUp";
             this.LSignUp.Size = new System.Drawing.Size(180, 13);
             this.LSignUp.TabIndex = 7;
@@ -105,23 +106,37 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Senpai_Student_.Properties.Resources.Print_2;
-            this.pictureBox1.Location = new System.Drawing.Point(45, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(232, 92);
+            this.pictureBox1.Size = new System.Drawing.Size(283, 92);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
+            // 
+            // LoadingLabel
+            // 
+            this.LoadingLabel.AutoSize = true;
+            this.LoadingLabel.Enabled = false;
+            this.LoadingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadingLabel.ForeColor = System.Drawing.Color.Red;
+            this.LoadingLabel.Location = new System.Drawing.Point(81, 170);
+            this.LoadingLabel.Name = "LoadingLabel";
+            this.LoadingLabel.Size = new System.Drawing.Size(159, 39);
+            this.LoadingLabel.TabIndex = 10;
+            this.LoadingLabel.Text = "Loading!!";
+            this.LoadingLabel.Visible = false;
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(307, 374);
+            this.ClientSize = new System.Drawing.Size(307, 318);
+            this.Controls.Add(this.LoadingLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LSignUp);
             this.Controls.Add(this.BLogin);
-            this.Controls.Add(this.TBPassword);
-            this.Controls.Add(this.TBEmail);
+            this.Controls.Add(this.PasswordTB);
+            this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.LPassword);
             this.Controls.Add(this.LEmail);
             this.Controls.Add(this.LWelcome);
@@ -139,11 +154,12 @@
         private System.Windows.Forms.Label LWelcome;
         private System.Windows.Forms.Label LEmail;
         private System.Windows.Forms.Label LPassword;
-        private System.Windows.Forms.TextBox TBEmail;
-        private System.Windows.Forms.TextBox TBPassword;
+        private System.Windows.Forms.TextBox EmailTB;
+        private System.Windows.Forms.TextBox PasswordTB;
         private System.Windows.Forms.Button BLogin;
         private System.Windows.Forms.Label LSignUp;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label LoadingLabel;
     }
 }
 

@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace Senpai_Student_
 {
@@ -13,6 +15,8 @@ namespace Senpai_Student_
     {
         SignUp3 temp = new SignUp3();
         SignUpData tempdata = new SignUpData();
+        SqlConnection ConnectionString = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
+
         public SignUpFinal()
         {
             InitializeComponent();
@@ -52,6 +56,7 @@ namespace Senpai_Student_
 
         private void EditButton_Click(object sender, EventArgs e)
         {
+            DetailsPanel.Enabled = true;
             SubmitButton.Visible = true;
             EditButton.Visible = false;
             ConfirmButton.Visible = false;
@@ -60,8 +65,10 @@ namespace Senpai_Student_
         private void ConfirmButton_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Select Password!");
+            DetailsPanel.Enabled = false;
             PasswordPanel.Visible = true;
             PasswordPanel.Enabled = true;
+            SubmitButton.Visible = true;
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
@@ -81,7 +88,29 @@ namespace Senpai_Student_
             }
             else
             {
+                LoadingLabel.Visible = true;
 
+                string InsertQuery = "INSERT INTO Senpai_Student (Name, Email, PhoneNumber, DateOfBirth, Gender, City, College, Stream, AboutYourself, Password) VALUES (@Name, @Email, @Phone, @DOB, @Gender,@City,@College,@Stream,@About,@Password)";
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
+                SqlCommand CommandToAddStudentAccount = new SqlCommand(InsertQuery, conn);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@Name", NameTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@Email", EmailTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@Phone", PhoneTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@College", CollegeTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@DOB", DateTime.UtcNow);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@Gender", GenderTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@City", CityTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@Stream", StreamTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@About", AboutYourselfRTB.Text);
+                CommandToAddStudentAccount.Parameters.AddWithValue("@Password", PasswordTB.Text);
+                MessageBox.Show(InsertQuery);
+
+                conn.Open();
+                CommandToAddStudentAccount.ExecuteNonQuery();
+                conn.Close();
+                LoadingLabel.Visible = false;
+                MessageBox.Show("Account Added. You can Sign In Now.");
+                this.Close();
             }
             
         }
