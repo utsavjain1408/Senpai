@@ -57,8 +57,8 @@ namespace Senpai__Organization_
             // Resize the DataGridView columns to fit the newly loaded content.
             MemoDataGridView.AutoResizeColumns(
                     DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
-            QuorumDataGridView.DataSource = MemoBindingSource;
-            QuorumDataGridView.DataSource = GetData("Select DataAndTime, Sender, Message FROM StaffRoomQuorumTable Where StaffRoomID =" + sv.StafffRoomID + " ");
+            //QuorumDataGridView.DataSource = MemoBindingSource;
+            QuorumDataGridView.DataSource = GetData("Select DateAndTime, Sender, Message FROM StaffRoomQuorumTable Where StaffRoomID =" + sv.StafffRoomID + " ");
             // Resize the DataGridView columns to fit the newly loaded content.
             QuorumDataGridView.AutoResizeColumns(
                     DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
@@ -186,9 +186,9 @@ namespace Senpai__Organization_
                 
                 
             }
-            catch (SqlException)
+            catch (SqlException e)
             {
-                MessageBox.Show("We are experiencing some technical difficulties. Please try again later!");
+                MessageBox.Show("We are experiencing some technical difficulties. Please try again later! Issue InGetDATA");
                 BindingSource bindingSource1 = new BindingSource();
                 return bindingSource1;
             }
@@ -267,13 +267,44 @@ namespace Senpai__Organization_
             }
             else
             {
-                SqlCommand AddMemoQuery = new SqlCommand("INSERT INTO StaffroomMemoTable (StaffRoomID,DataAndTime,Message,Subject)Values('"+sv.StafffRoomID+"','"+DateTime.Now+"','"+RTBDescription.Text+"','"+MemoSubjectTextBox.Text+"')",conn);
+                SqlCommand AddMemoQuery = new SqlCommand("INSERT INTO StaffroomMemoTable (StaffRoomID,DataAndTime,Message,Subject)Values(@StaffRoomID,@DataAndTime,@Message,@Subject)", conn);
+                AddMemoQuery.Parameters.AddWithValue("@StaffRoomID", sv.StafffRoomID);
+                AddMemoQuery.Parameters.AddWithValue("@DataAndTime", DateTime.Now);
+                AddMemoQuery.Parameters.AddWithValue("@Message", MemoDetailRTB.Text);
+                AddMemoQuery.Parameters.AddWithValue("@Subject", MemoSubjectTextBox.Text);
+
                 conn.Open();
                 AddMemoQuery.ExecuteNonQuery();
                 conn.Close();
+                MemoDataGridView.DataSource = GetData("Select DataAndTime, Subject, Message FROM StaffRoomMemoTable Where StaffRoomID =" + sv.StafffRoomID + " ");
+                // Resize the DataGridView columns to fit the newly loaded content.
+                MemoDataGridView.AutoResizeColumns(
+                        DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+
             }
 
 
+        }
+
+        private void SendButton_Click(object sender, EventArgs e)
+        {
+            if (TBMessage.Text == "")
+            {
+                MessageBox.Show("Kindly Put Some Message.");
+            }
+            SqlCommand AddMessageQuery = new SqlCommand("INSERT INTO StaffroomQuorumTable (StaffRoomID,DateAndTime,Message,Sender)Values(@StaffRoomID,@DataAndTime,@Message,@SenderName)", conn);
+            AddMessageQuery.Parameters.AddWithValue("@StaffRoomID", sv.StafffRoomID);
+            AddMessageQuery.Parameters.AddWithValue("@DataAndTime", DateTime.Now);
+            AddMessageQuery.Parameters.AddWithValue("@Message", TBMessage.Text);
+            AddMessageQuery.Parameters.AddWithValue("@SenderName", sv.HODName);
+
+            conn.Open();
+            AddMessageQuery.ExecuteNonQuery();
+            conn.Close();
+            QuorumDataGridView.DataSource = GetData("Select DateAndTime, Sender, Message FROM StaffRoomQuorumTable Where StaffRoomID =" + sv.StafffRoomID + " ");
+            // Resize the DataGridView columns to fit the newly loaded content.
+            QuorumDataGridView.AutoResizeColumns(
+                    DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
         }
     }
 }

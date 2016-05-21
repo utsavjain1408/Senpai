@@ -74,6 +74,7 @@ namespace Senpai__Organization_
             sv.Department = ds.Tables[0].Rows[0]["Department"].ToString(); 
             sv.Description = ds.Tables[0].Rows[0]["Description"].ToString(); 
             sv.StafffRoomID = ds.Tables[0].Rows[0]["StaffRoomID"].ToString();
+            sv.HODName = x.HeadPersonName;
             StaffRoom ob = new StaffRoom(sv);
             ob.Show();
         }

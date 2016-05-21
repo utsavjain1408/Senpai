@@ -344,6 +344,7 @@
             this.SendButton.TabIndex = 3;
             this.SendButton.Text = "Send";
             this.SendButton.UseVisualStyleBackColor = true;
+            this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
             // 
             // LMessage
             // 
@@ -364,6 +365,7 @@
             // QuorumDataGridView
             // 
             this.QuorumDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QuorumDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.QuorumDataGridView.Location = new System.Drawing.Point(16, 15);
             this.QuorumDataGridView.Name = "QuorumDataGridView";
             this.QuorumDataGridView.Size = new System.Drawing.Size(341, 247);
@@ -516,6 +518,7 @@
             // MemberDataGridView
             // 
             this.MemberDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MemberDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.MemberDataGridView.Location = new System.Drawing.Point(6, 25);
             this.MemberDataGridView.Name = "MemberDataGridView";
             this.MemberDataGridView.Size = new System.Drawing.Size(362, 152);
