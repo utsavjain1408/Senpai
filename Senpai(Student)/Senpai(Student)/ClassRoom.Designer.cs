@@ -31,62 +31,65 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassRoom));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageInfo = new System.Windows.Forms.TabPage();
+            this.DescriptionL = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.CodeL = new System.Windows.Forms.Label();
+            this.SubjectL = new System.Windows.Forms.Label();
+            this.NameL = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TabPageStudyMaterial = new System.Windows.Forms.TabPage();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.StudyMaterialGridView = new System.Windows.Forms.DataGridView();
             this.tabPageQuorum = new System.Windows.Forms.TabPage();
+            this.SendButton = new System.Windows.Forms.Button();
+            this.LMessage = new System.Windows.Forms.Label();
+            this.TBMessage = new System.Windows.Forms.TextBox();
+            this.QuorumDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPageExam = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.Q3ComboBox = new System.Windows.Forms.ComboBox();
+            this.Q3DL = new System.Windows.Forms.Label();
+            this.Q3CL = new System.Windows.Forms.Label();
+            this.Q3BL = new System.Windows.Forms.Label();
+            this.Q3AL = new System.Windows.Forms.Label();
+            this.Q3TB = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.Q2TB = new System.Windows.Forms.TextBox();
+            this.Q2ComboBox = new System.Windows.Forms.ComboBox();
+            this.Q2DL = new System.Windows.Forms.Label();
+            this.Q2CL = new System.Windows.Forms.Label();
+            this.Q2BL = new System.Windows.Forms.Label();
+            this.Q2AL = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.Q1ComboBox = new System.Windows.Forms.ComboBox();
+            this.Q1DL = new System.Windows.Forms.Label();
+            this.Q1CL = new System.Windows.Forms.Label();
+            this.Q1BL = new System.Windows.Forms.Label();
+            this.Q1AL = new System.Windows.Forms.Label();
+            this.Q1TB = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabPageLeave = new System.Windows.Forms.TabPage();
             this.buttonLeaveClassroom = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPageInfo.SuspendLayout();
             this.TabPageStudyMaterial.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudyMaterialGridView)).BeginInit();
             this.tabPageQuorum.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuorumDataGridView)).BeginInit();
             this.tabPageExam.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.tabPageLeave.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -99,16 +102,16 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 95);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(390, 378);
+            this.tabControl1.Size = new System.Drawing.Size(390, 451);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPageInfo
             // 
-            this.tabPageInfo.Controls.Add(this.label12);
+            this.tabPageInfo.Controls.Add(this.DescriptionL);
             this.tabPageInfo.Controls.Add(this.label11);
-            this.tabPageInfo.Controls.Add(this.label10);
-            this.tabPageInfo.Controls.Add(this.label9);
-            this.tabPageInfo.Controls.Add(this.label8);
+            this.tabPageInfo.Controls.Add(this.CodeL);
+            this.tabPageInfo.Controls.Add(this.SubjectL);
+            this.tabPageInfo.Controls.Add(this.NameL);
             this.tabPageInfo.Controls.Add(this.label5);
             this.tabPageInfo.Controls.Add(this.label4);
             this.tabPageInfo.Controls.Add(this.label3);
@@ -116,10 +119,56 @@
             this.tabPageInfo.Controls.Add(this.label1);
             this.tabPageInfo.Location = new System.Drawing.Point(4, 22);
             this.tabPageInfo.Name = "tabPageInfo";
-            this.tabPageInfo.Size = new System.Drawing.Size(382, 352);
+            this.tabPageInfo.Size = new System.Drawing.Size(382, 425);
             this.tabPageInfo.TabIndex = 4;
             this.tabPageInfo.Text = "Info";
             this.tabPageInfo.UseVisualStyleBackColor = true;
+            // 
+            // DescriptionL
+            // 
+            this.DescriptionL.AutoSize = true;
+            this.DescriptionL.Location = new System.Drawing.Point(190, 242);
+            this.DescriptionL.Name = "DescriptionL";
+            this.DescriptionL.Size = new System.Drawing.Size(101, 13);
+            this.DescriptionL.TabIndex = 9;
+            this.DescriptionL.Text = "This is a good Class";
+            this.DescriptionL.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(190, 194);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 13);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "Links for books";
+            // 
+            // CodeL
+            // 
+            this.CodeL.AutoSize = true;
+            this.CodeL.Location = new System.Drawing.Point(190, 143);
+            this.CodeL.Name = "CodeL";
+            this.CodeL.Size = new System.Drawing.Size(37, 13);
+            this.CodeL.TabIndex = 7;
+            this.CodeL.Text = "15698";
+            // 
+            // SubjectL
+            // 
+            this.SubjectL.AutoSize = true;
+            this.SubjectL.Location = new System.Drawing.Point(190, 92);
+            this.SubjectL.Name = "SubjectL";
+            this.SubjectL.Size = new System.Drawing.Size(43, 13);
+            this.SubjectL.TabIndex = 6;
+            this.SubjectL.Text = "Physics";
+            // 
+            // NameL
+            // 
+            this.NameL.AutoSize = true;
+            this.NameL.Location = new System.Drawing.Point(190, 43);
+            this.NameL.Name = "NameL";
+            this.NameL.Size = new System.Drawing.Size(68, 13);
+            this.NameL.TabIndex = 5;
+            this.NameL.Text = "HSC Physics";
             // 
             // label5
             // 
@@ -170,46 +219,71 @@
             // 
             // TabPageStudyMaterial
             // 
-            this.TabPageStudyMaterial.Controls.Add(this.linkLabel1);
-            this.TabPageStudyMaterial.Controls.Add(this.label6);
+            this.TabPageStudyMaterial.Controls.Add(this.StudyMaterialGridView);
             this.TabPageStudyMaterial.Location = new System.Drawing.Point(4, 22);
             this.TabPageStudyMaterial.Name = "TabPageStudyMaterial";
             this.TabPageStudyMaterial.Padding = new System.Windows.Forms.Padding(3);
-            this.TabPageStudyMaterial.Size = new System.Drawing.Size(382, 352);
+            this.TabPageStudyMaterial.Size = new System.Drawing.Size(382, 425);
             this.TabPageStudyMaterial.TabIndex = 0;
             this.TabPageStudyMaterial.Text = "Study Material";
             this.TabPageStudyMaterial.UseVisualStyleBackColor = true;
             // 
-            // linkLabel1
+            // StudyMaterialGridView
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(91, 44);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 1;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Books";
+            this.StudyMaterialGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.StudyMaterialGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StudyMaterialGridView.Location = new System.Drawing.Point(3, 3);
+            this.StudyMaterialGridView.Name = "StudyMaterialGridView";
+            this.StudyMaterialGridView.Size = new System.Drawing.Size(376, 419);
+            this.StudyMaterialGridView.TabIndex = 2;
             // 
             // tabPageQuorum
             // 
-            this.tabPageQuorum.Controls.Add(this.dataGridView1);
+            this.tabPageQuorum.Controls.Add(this.SendButton);
+            this.tabPageQuorum.Controls.Add(this.LMessage);
+            this.tabPageQuorum.Controls.Add(this.TBMessage);
+            this.tabPageQuorum.Controls.Add(this.QuorumDataGridView);
             this.tabPageQuorum.Location = new System.Drawing.Point(4, 22);
             this.tabPageQuorum.Name = "tabPageQuorum";
             this.tabPageQuorum.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageQuorum.Size = new System.Drawing.Size(382, 352);
+            this.tabPageQuorum.Size = new System.Drawing.Size(382, 425);
             this.tabPageQuorum.TabIndex = 1;
             this.tabPageQuorum.Text = "Quorum";
             this.tabPageQuorum.UseVisualStyleBackColor = true;
+            // 
+            // SendButton
+            // 
+            this.SendButton.Location = new System.Drawing.Point(238, 281);
+            this.SendButton.Name = "SendButton";
+            this.SendButton.Size = new System.Drawing.Size(75, 23);
+            this.SendButton.TabIndex = 6;
+            this.SendButton.Text = "Send";
+            this.SendButton.UseVisualStyleBackColor = true;
+            this.SendButton.Click += new System.EventHandler(this.SendButton_Click);
+            // 
+            // LMessage
+            // 
+            this.LMessage.AutoSize = true;
+            this.LMessage.Location = new System.Drawing.Point(49, 257);
+            this.LMessage.Name = "LMessage";
+            this.LMessage.Size = new System.Drawing.Size(50, 13);
+            this.LMessage.TabIndex = 5;
+            this.LMessage.Text = "Message";
+            // 
+            // TBMessage
+            // 
+            this.TBMessage.Location = new System.Drawing.Point(52, 283);
+            this.TBMessage.Name = "TBMessage";
+            this.TBMessage.Size = new System.Drawing.Size(180, 20);
+            this.TBMessage.TabIndex = 4;
+            // 
+            // QuorumDataGridView
+            // 
+            this.QuorumDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QuorumDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.QuorumDataGridView.Name = "QuorumDataGridView";
+            this.QuorumDataGridView.Size = new System.Drawing.Size(376, 223);
+            this.QuorumDataGridView.TabIndex = 0;
             // 
             // tabPageExam
             // 
@@ -219,10 +293,261 @@
             this.tabPageExam.Controls.Add(this.panel1);
             this.tabPageExam.Location = new System.Drawing.Point(4, 22);
             this.tabPageExam.Name = "tabPageExam";
-            this.tabPageExam.Size = new System.Drawing.Size(382, 352);
+            this.tabPageExam.Size = new System.Drawing.Size(382, 425);
             this.tabPageExam.TabIndex = 2;
             this.tabPageExam.Text = "Exams";
             this.tabPageExam.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(295, 399);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Submit Answers";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.Q3ComboBox);
+            this.panel3.Controls.Add(this.Q3DL);
+            this.panel3.Controls.Add(this.Q3CL);
+            this.panel3.Controls.Add(this.Q3BL);
+            this.panel3.Controls.Add(this.Q3AL);
+            this.panel3.Controls.Add(this.Q3TB);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Location = new System.Drawing.Point(3, 271);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(376, 122);
+            this.panel3.TabIndex = 2;
+            // 
+            // Q3ComboBox
+            // 
+            this.Q3ComboBox.FormattingEnabled = true;
+            this.Q3ComboBox.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.Q3ComboBox.Location = new System.Drawing.Point(24, 96);
+            this.Q3ComboBox.Name = "Q3ComboBox";
+            this.Q3ComboBox.Size = new System.Drawing.Size(91, 21);
+            this.Q3ComboBox.TabIndex = 20;
+            // 
+            // Q3DL
+            // 
+            this.Q3DL.AutoSize = true;
+            this.Q3DL.Location = new System.Drawing.Point(21, 74);
+            this.Q3DL.Name = "Q3DL";
+            this.Q3DL.Size = new System.Drawing.Size(18, 13);
+            this.Q3DL.TabIndex = 19;
+            this.Q3DL.Text = "D.";
+            // 
+            // Q3CL
+            // 
+            this.Q3CL.AutoSize = true;
+            this.Q3CL.Location = new System.Drawing.Point(21, 61);
+            this.Q3CL.Name = "Q3CL";
+            this.Q3CL.Size = new System.Drawing.Size(17, 13);
+            this.Q3CL.TabIndex = 18;
+            this.Q3CL.Text = "C.";
+            // 
+            // Q3BL
+            // 
+            this.Q3BL.AutoSize = true;
+            this.Q3BL.Location = new System.Drawing.Point(21, 48);
+            this.Q3BL.Name = "Q3BL";
+            this.Q3BL.Size = new System.Drawing.Size(17, 13);
+            this.Q3BL.TabIndex = 17;
+            this.Q3BL.Text = "B.";
+            // 
+            // Q3AL
+            // 
+            this.Q3AL.AutoSize = true;
+            this.Q3AL.Location = new System.Drawing.Point(22, 33);
+            this.Q3AL.Name = "Q3AL";
+            this.Q3AL.Size = new System.Drawing.Size(17, 13);
+            this.Q3AL.TabIndex = 16;
+            this.Q3AL.Text = "A.";
+            // 
+            // Q3TB
+            // 
+            this.Q3TB.Enabled = false;
+            this.Q3TB.Location = new System.Drawing.Point(73, 13);
+            this.Q3TB.Name = "Q3TB";
+            this.Q3TB.Size = new System.Drawing.Size(294, 20);
+            this.Q3TB.TabIndex = 15;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(64, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "Question 3 :";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.Q2TB);
+            this.panel2.Controls.Add(this.Q2ComboBox);
+            this.panel2.Controls.Add(this.Q2DL);
+            this.panel2.Controls.Add(this.Q2CL);
+            this.panel2.Controls.Add(this.Q2BL);
+            this.panel2.Controls.Add(this.Q2AL);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Location = new System.Drawing.Point(3, 138);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(376, 127);
+            this.panel2.TabIndex = 1;
+            // 
+            // Q2TB
+            // 
+            this.Q2TB.Enabled = false;
+            this.Q2TB.Location = new System.Drawing.Point(73, 13);
+            this.Q2TB.Name = "Q2TB";
+            this.Q2TB.Size = new System.Drawing.Size(294, 20);
+            this.Q2TB.TabIndex = 14;
+            // 
+            // Q2ComboBox
+            // 
+            this.Q2ComboBox.FormattingEnabled = true;
+            this.Q2ComboBox.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.Q2ComboBox.Location = new System.Drawing.Point(22, 106);
+            this.Q2ComboBox.Name = "Q2ComboBox";
+            this.Q2ComboBox.Size = new System.Drawing.Size(91, 21);
+            this.Q2ComboBox.TabIndex = 13;
+            // 
+            // Q2DL
+            // 
+            this.Q2DL.AutoSize = true;
+            this.Q2DL.Location = new System.Drawing.Point(19, 84);
+            this.Q2DL.Name = "Q2DL";
+            this.Q2DL.Size = new System.Drawing.Size(18, 13);
+            this.Q2DL.TabIndex = 12;
+            this.Q2DL.Text = "D.";
+            // 
+            // Q2CL
+            // 
+            this.Q2CL.AutoSize = true;
+            this.Q2CL.Location = new System.Drawing.Point(19, 71);
+            this.Q2CL.Name = "Q2CL";
+            this.Q2CL.Size = new System.Drawing.Size(17, 13);
+            this.Q2CL.TabIndex = 11;
+            this.Q2CL.Text = "C.";
+            // 
+            // Q2BL
+            // 
+            this.Q2BL.AutoSize = true;
+            this.Q2BL.Location = new System.Drawing.Point(19, 58);
+            this.Q2BL.Name = "Q2BL";
+            this.Q2BL.Size = new System.Drawing.Size(17, 13);
+            this.Q2BL.TabIndex = 10;
+            this.Q2BL.Text = "B.";
+            // 
+            // Q2AL
+            // 
+            this.Q2AL.AutoSize = true;
+            this.Q2AL.Location = new System.Drawing.Point(20, 43);
+            this.Q2AL.Name = "Q2AL";
+            this.Q2AL.Size = new System.Drawing.Size(17, 13);
+            this.Q2AL.TabIndex = 9;
+            this.Q2AL.Text = "A.";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(3, 16);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(64, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Question 2 :";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.Q1ComboBox);
+            this.panel1.Controls.Add(this.Q1DL);
+            this.panel1.Controls.Add(this.Q1CL);
+            this.panel1.Controls.Add(this.Q1BL);
+            this.panel1.Controls.Add(this.Q1AL);
+            this.panel1.Controls.Add(this.Q1TB);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(376, 129);
+            this.panel1.TabIndex = 0;
+            // 
+            // Q1ComboBox
+            // 
+            this.Q1ComboBox.FormattingEnabled = true;
+            this.Q1ComboBox.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D"});
+            this.Q1ComboBox.Location = new System.Drawing.Point(22, 101);
+            this.Q1ComboBox.Name = "Q1ComboBox";
+            this.Q1ComboBox.Size = new System.Drawing.Size(91, 21);
+            this.Q1ComboBox.TabIndex = 8;
+            // 
+            // Q1DL
+            // 
+            this.Q1DL.AutoSize = true;
+            this.Q1DL.Location = new System.Drawing.Point(21, 85);
+            this.Q1DL.Name = "Q1DL";
+            this.Q1DL.Size = new System.Drawing.Size(18, 13);
+            this.Q1DL.TabIndex = 7;
+            this.Q1DL.Text = "D.";
+            // 
+            // Q1CL
+            // 
+            this.Q1CL.AutoSize = true;
+            this.Q1CL.Location = new System.Drawing.Point(20, 72);
+            this.Q1CL.Name = "Q1CL";
+            this.Q1CL.Size = new System.Drawing.Size(17, 13);
+            this.Q1CL.TabIndex = 6;
+            this.Q1CL.Text = "C.";
+            // 
+            // Q1BL
+            // 
+            this.Q1BL.AutoSize = true;
+            this.Q1BL.Location = new System.Drawing.Point(20, 57);
+            this.Q1BL.Name = "Q1BL";
+            this.Q1BL.Size = new System.Drawing.Size(20, 13);
+            this.Q1BL.TabIndex = 5;
+            this.Q1BL.Text = "B. ";
+            // 
+            // Q1AL
+            // 
+            this.Q1AL.AutoSize = true;
+            this.Q1AL.Location = new System.Drawing.Point(21, 44);
+            this.Q1AL.Name = "Q1AL";
+            this.Q1AL.Size = new System.Drawing.Size(20, 13);
+            this.Q1AL.TabIndex = 4;
+            this.Q1AL.Text = "A. ";
+            // 
+            // Q1TB
+            // 
+            this.Q1TB.Enabled = false;
+            this.Q1TB.Location = new System.Drawing.Point(73, 13);
+            this.Q1TB.Name = "Q1TB";
+            this.Q1TB.Size = new System.Drawing.Size(294, 20);
+            this.Q1TB.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(64, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Question 1 :";
             // 
             // tabPageLeave
             // 
@@ -230,7 +555,7 @@
             this.tabPageLeave.Controls.Add(this.label);
             this.tabPageLeave.Location = new System.Drawing.Point(4, 22);
             this.tabPageLeave.Name = "tabPageLeave";
-            this.tabPageLeave.Size = new System.Drawing.Size(382, 352);
+            this.tabPageLeave.Size = new System.Drawing.Size(382, 425);
             this.tabPageLeave.TabIndex = 3;
             this.tabPageLeave.Text = "Settings";
             this.tabPageLeave.UseVisualStyleBackColor = true;
@@ -243,6 +568,7 @@
             this.buttonLeaveClassroom.TabIndex = 1;
             this.buttonLeaveClassroom.Text = "Leave!";
             this.buttonLeaveClassroom.UseVisualStyleBackColor = true;
+            this.buttonLeaveClassroom.Click += new System.EventHandler(this.buttonLeaveClassroom_Click);
             // 
             // label
             // 
@@ -263,301 +589,11 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(190, 43);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 13);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "HSC Physics";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(190, 92);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 13);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Physics";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(190, 143);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "15698";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(190, 194);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 13);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "Links for books";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(190, 242);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(101, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "This is a good Class";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(376, 346);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(376, 103);
-            this.panel1.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton4);
-            this.groupBox1.Controls.Add(this.radioButton3);
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 32);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(370, 68);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Options";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(21, 20);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(35, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "A.";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(205, 22);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(32, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "B";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(21, 43);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(35, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "C.";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(205, 45);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(33, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "D";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 13);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Question 1 :";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label13);
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Location = new System.Drawing.Point(3, 112);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(376, 103);
-            this.panel2.TabIndex = 1;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(3, 16);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(64, 13);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Question 2 :";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.radioButton5);
-            this.groupBox2.Controls.Add(this.radioButton6);
-            this.groupBox2.Controls.Add(this.radioButton7);
-            this.groupBox2.Controls.Add(this.radioButton8);
-            this.groupBox2.Location = new System.Drawing.Point(3, 32);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(370, 68);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Options";
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(205, 45);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(33, 17);
-            this.radioButton5.TabIndex = 3;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "D";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(21, 43);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(35, 17);
-            this.radioButton6.TabIndex = 2;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "C.";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(205, 22);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(32, 17);
-            this.radioButton7.TabIndex = 1;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "B";
-            this.radioButton7.UseVisualStyleBackColor = true;
-            // 
-            // radioButton8
-            // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Location = new System.Drawing.Point(21, 20);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(35, 17);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "A.";
-            this.radioButton8.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.groupBox3);
-            this.panel3.Location = new System.Drawing.Point(3, 221);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(376, 103);
-            this.panel3.TabIndex = 2;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(3, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(64, 13);
-            this.label14.TabIndex = 1;
-            this.label14.Text = "Question 3 :";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.radioButton9);
-            this.groupBox3.Controls.Add(this.radioButton10);
-            this.groupBox3.Controls.Add(this.radioButton11);
-            this.groupBox3.Controls.Add(this.radioButton12);
-            this.groupBox3.Location = new System.Drawing.Point(3, 32);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(370, 68);
-            this.groupBox3.TabIndex = 0;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Options";
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(205, 45);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(33, 17);
-            this.radioButton9.TabIndex = 3;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "D";
-            this.radioButton9.UseVisualStyleBackColor = true;
-            // 
-            // radioButton10
-            // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(21, 43);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(35, 17);
-            this.radioButton10.TabIndex = 2;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "C.";
-            this.radioButton10.UseVisualStyleBackColor = true;
-            // 
-            // radioButton11
-            // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(205, 22);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(32, 17);
-            this.radioButton11.TabIndex = 1;
-            this.radioButton11.TabStop = true;
-            this.radioButton11.Text = "B";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton12
-            // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(21, 20);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(35, 17);
-            this.radioButton12.TabIndex = 0;
-            this.radioButton12.TabStop = true;
-            this.radioButton12.Text = "A.";
-            this.radioButton12.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(286, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Submit Answers";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // ClassRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 484);
+            this.ClientSize = new System.Drawing.Size(419, 558);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -568,25 +604,20 @@
             this.tabPageInfo.ResumeLayout(false);
             this.tabPageInfo.PerformLayout();
             this.TabPageStudyMaterial.ResumeLayout(false);
-            this.TabPageStudyMaterial.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.StudyMaterialGridView)).EndInit();
             this.tabPageQuorum.ResumeLayout(false);
+            this.tabPageQuorum.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.QuorumDataGridView)).EndInit();
             this.tabPageExam.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.tabPageLeave.ResumeLayout(false);
             this.tabPageLeave.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -606,36 +637,41 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label DescriptionL;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label CodeL;
+        private System.Windows.Forms.Label SubjectL;
+        private System.Windows.Forms.Label NameL;
+        private System.Windows.Forms.DataGridView QuorumDataGridView;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.RadioButton radioButton11;
-        private System.Windows.Forms.RadioButton radioButton12;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView StudyMaterialGridView;
+        private System.Windows.Forms.Button SendButton;
+        private System.Windows.Forms.Label LMessage;
+        private System.Windows.Forms.TextBox TBMessage;
+        private System.Windows.Forms.ComboBox Q3ComboBox;
+        private System.Windows.Forms.Label Q3DL;
+        private System.Windows.Forms.Label Q3CL;
+        private System.Windows.Forms.Label Q3BL;
+        private System.Windows.Forms.Label Q3AL;
+        private System.Windows.Forms.TextBox Q3TB;
+        private System.Windows.Forms.TextBox Q2TB;
+        private System.Windows.Forms.ComboBox Q2ComboBox;
+        private System.Windows.Forms.Label Q2DL;
+        private System.Windows.Forms.Label Q2CL;
+        private System.Windows.Forms.Label Q2BL;
+        private System.Windows.Forms.Label Q2AL;
+        private System.Windows.Forms.ComboBox Q1ComboBox;
+        private System.Windows.Forms.Label Q1DL;
+        private System.Windows.Forms.Label Q1CL;
+        private System.Windows.Forms.Label Q1BL;
+        private System.Windows.Forms.Label Q1AL;
+        private System.Windows.Forms.TextBox Q1TB;
     }
 }

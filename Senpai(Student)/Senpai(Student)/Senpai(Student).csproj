@@ -81,6 +81,7 @@
     <Compile Include="ClassRoom.Designer.cs">
       <DependentUpon>ClassRoom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassRoomExam.cs" />
     <Compile Include="FindClassroom.cs">
       <SubType>Form</SubType>
     </Compile>

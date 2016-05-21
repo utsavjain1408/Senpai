@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Senpai(Student).exe" size="1816576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Senpai(Student).exe" size="1822720">
       <assemblyIdentity name="Senpai(Student)" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>K49Clh4S4ROy8xV31HP/C1l/yOo=</dsig:DigestValue>
+        <dsig:DigestValue>T2ShYUICyS663uo8uTLhoarjEcc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -33,15 +33,17 @@ namespace Senpai_Student_
             comboBox1.DataSource = ds.Tables[0];
             comboBox1.ValueMember = "ClassRoomID";
             comboBox1.DisplayMember = "Name";
-            String QueryToInsert = "INSERT INTO ClassRoomMemberTable (StudentID,StudentName,ClassRoomID)VALUES (@StudentID,@StudenName,@ClassRoomID)";
+            String QueryToInsert = "INSERT INTO ClassRoomMemberTable (StudentID,StudentName,ClassRoomID,ClassRoomName)VALUES (@StudentID,@StudenName,@ClassRoomID,@ClassRoomName)";
 
             SqlCommand CommandToInsertIntoMembershipTable = new SqlCommand(QueryToInsert,conn);
             CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@StudentID", sv.SenpaiID);
             CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@StudenName",sv.UserName);
             CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@ClassRoomID", comboBox1.SelectedValue);
+            CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@ClassRoomName", comboBox1.Text);
             conn.Open();
             CommandToInsertIntoMembershipTable.ExecuteNonQuery();
             conn.Close();
+            MessageBox.Show("ClassRoom Added!");
         }
 
         private void button2_Click(object sender, EventArgs e)

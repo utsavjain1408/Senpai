@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ButtonViewInfo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.OpenClassRoomButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxClassroomSelector = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -73,7 +73,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.OpenClassRoomButton);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBoxClassroomSelector);
             this.panel1.Location = new System.Drawing.Point(32, 180);
@@ -81,15 +81,15 @@
             this.panel1.Size = new System.Drawing.Size(179, 147);
             this.panel1.TabIndex = 4;
             // 
-            // button1
+            // OpenClassRoomButton
             // 
-            this.button1.Location = new System.Drawing.Point(55, 99);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Open";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OpenClassRoomButton.Location = new System.Drawing.Point(55, 99);
+            this.OpenClassRoomButton.Name = "OpenClassRoomButton";
+            this.OpenClassRoomButton.Size = new System.Drawing.Size(75, 23);
+            this.OpenClassRoomButton.TabIndex = 7;
+            this.OpenClassRoomButton.Text = "Open";
+            this.OpenClassRoomButton.UseVisualStyleBackColor = true;
+            this.OpenClassRoomButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -146,7 +146,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ButtonViewInfo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OpenClassRoomButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxClassroomSelector;
         private System.Windows.Forms.PictureBox pictureBox1;
