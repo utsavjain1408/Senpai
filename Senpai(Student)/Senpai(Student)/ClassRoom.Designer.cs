@@ -276,6 +276,7 @@
             this.TBMessage.Name = "TBMessage";
             this.TBMessage.Size = new System.Drawing.Size(180, 20);
             this.TBMessage.TabIndex = 4;
+            this.TBMessage.TextChanged += new System.EventHandler(this.TBMessage_TextChanged);
             // 
             // QuorumDataGridView
             // 

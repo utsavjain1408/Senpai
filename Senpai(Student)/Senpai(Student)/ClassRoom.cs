@@ -183,5 +183,10 @@ namespace Senpai_Student_
             conn.Close();
 
         }
+
+        private void TBMessage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

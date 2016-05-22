@@ -58,15 +58,9 @@
             this.TBMessage = new System.Windows.Forms.TextBox();
             this.QuorumDataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.RequestPanel = new System.Windows.Forms.Panel();
-            this.ReqConfirmB = new System.Windows.Forms.Button();
-            this.ReqCancelB = new System.Windows.Forms.Button();
             this.RemovePanel = new System.Windows.Forms.Panel();
             this.ConfirmRemoveButton = new System.Windows.Forms.Button();
             this.NoButton = new System.Windows.Forms.Button();
-            this.BAdd = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.AddMemberComboBox = new System.Windows.Forms.ComboBox();
             this.BRemove = new System.Windows.Forms.Button();
             this.RemoveMemberComboBox = new System.Windows.Forms.ComboBox();
             this.LRemove = new System.Windows.Forms.Label();
@@ -81,7 +75,6 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QuorumDataGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
-            this.RequestPanel.SuspendLayout();
             this.RemovePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MemberDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -374,11 +367,7 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.RequestPanel);
             this.tabPage4.Controls.Add(this.RemovePanel);
-            this.tabPage4.Controls.Add(this.BAdd);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.AddMemberComboBox);
             this.tabPage4.Controls.Add(this.BRemove);
             this.tabPage4.Controls.Add(this.RemoveMemberComboBox);
             this.tabPage4.Controls.Add(this.LRemove);
@@ -391,36 +380,6 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Members";
             this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // RequestPanel
-            // 
-            this.RequestPanel.Controls.Add(this.ReqConfirmB);
-            this.RequestPanel.Controls.Add(this.ReqCancelB);
-            this.RequestPanel.Location = new System.Drawing.Point(174, 299);
-            this.RequestPanel.Name = "RequestPanel";
-            this.RequestPanel.Size = new System.Drawing.Size(197, 28);
-            this.RequestPanel.TabIndex = 9;
-            this.RequestPanel.Visible = false;
-            // 
-            // ReqConfirmB
-            // 
-            this.ReqConfirmB.Location = new System.Drawing.Point(112, 2);
-            this.ReqConfirmB.Name = "ReqConfirmB";
-            this.ReqConfirmB.Size = new System.Drawing.Size(75, 23);
-            this.ReqConfirmB.TabIndex = 1;
-            this.ReqConfirmB.Text = "Confirm";
-            this.ReqConfirmB.UseVisualStyleBackColor = true;
-            this.ReqConfirmB.Click += new System.EventHandler(this.ReqConfirmB_Click);
-            // 
-            // ReqCancelB
-            // 
-            this.ReqCancelB.Location = new System.Drawing.Point(3, 2);
-            this.ReqCancelB.Name = "ReqCancelB";
-            this.ReqCancelB.Size = new System.Drawing.Size(75, 23);
-            this.ReqCancelB.TabIndex = 0;
-            this.ReqCancelB.Text = "Cancel";
-            this.ReqCancelB.UseVisualStyleBackColor = true;
-            this.ReqCancelB.Click += new System.EventHandler(this.ReqCancelB_Click);
             // 
             // RemovePanel
             // 
@@ -451,33 +410,6 @@
             this.NoButton.Text = "Cancel";
             this.NoButton.UseVisualStyleBackColor = true;
             this.NoButton.Click += new System.EventHandler(this.NoButton_Click);
-            // 
-            // BAdd
-            // 
-            this.BAdd.Location = new System.Drawing.Point(253, 272);
-            this.BAdd.Name = "BAdd";
-            this.BAdd.Size = new System.Drawing.Size(75, 23);
-            this.BAdd.TabIndex = 7;
-            this.BAdd.Text = "Add";
-            this.BAdd.UseVisualStyleBackColor = true;
-            this.BAdd.Click += new System.EventHandler(this.BAdd_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(20, 275);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Requests";
-            // 
-            // AddMemberComboBox
-            // 
-            this.AddMemberComboBox.FormattingEnabled = true;
-            this.AddMemberComboBox.Location = new System.Drawing.Point(108, 272);
-            this.AddMemberComboBox.Name = "AddMemberComboBox";
-            this.AddMemberComboBox.Size = new System.Drawing.Size(121, 21);
-            this.AddMemberComboBox.TabIndex = 5;
             // 
             // BRemove
             // 
@@ -547,7 +479,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.QuorumDataGridView)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.RequestPanel.ResumeLayout(false);
             this.RemovePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MemberDataGridView)).EndInit();
             this.ResumeLayout(false);
@@ -581,9 +512,6 @@
         private System.Windows.Forms.TextBox TBMessage;
         private System.Windows.Forms.DataGridView QuorumDataGridView;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Button BAdd;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox AddMemberComboBox;
         private System.Windows.Forms.Button BRemove;
         private System.Windows.Forms.ComboBox RemoveMemberComboBox;
         private System.Windows.Forms.Label LRemove;
@@ -596,8 +524,5 @@
         private System.Windows.Forms.Panel RemovePanel;
         private System.Windows.Forms.Button ConfirmRemoveButton;
         private System.Windows.Forms.Button NoButton;
-        private System.Windows.Forms.Panel RequestPanel;
-        private System.Windows.Forms.Button ReqConfirmB;
-        private System.Windows.Forms.Button ReqCancelB;
     }
 }

@@ -93,6 +93,7 @@ namespace Senpai__Organization_
                         DashBoard d = new DashBoard(sv);
                         d.Show();
                         this.Visible = false;
+                        MessageBox.Show("Name = "+sv.Name);
                     }
                     else
                     {

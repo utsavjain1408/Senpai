@@ -84,23 +84,8 @@ namespace Senpai__Organization_
             {
                 MessageBox.Show("We are suffering from some technical difficulty. Kindly try again after some time");
             }
-            //Filling the AddMemberComboBox
-            SqlCommand AddMemberQuery = new SqlCommand("Select * from StaffRoomRequestTable where RequestedStaffRoomID =" + sv.StafffRoomID + "", conn);
-            try
-            {
-                conn.Open();
-                SqlDataAdapter adapt = new SqlDataAdapter(AddMemberQuery);
-                
-                adapt.Fill(StaffRoomRequestTableDataSet);
-                conn.Close();
-                AddMemberComboBox.DataSource = StaffRoomRequestTableDataSet.Tables[0];
-                AddMemberComboBox.ValueMember = "RequestID";
-                AddMemberComboBox.DisplayMember = "TeacherName";
-            }
-            catch
-            {
-                MessageBox.Show("We are suffering from some technical difficulty. Kindly try again after some time");
-            }
+           
+            
         }
 
         private void EditButton_Click(object sender, EventArgs e)

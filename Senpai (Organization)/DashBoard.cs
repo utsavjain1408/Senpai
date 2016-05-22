@@ -62,7 +62,8 @@ namespace Senpai__Organization_
         {
             object a = StaffRoomListComboBox.SelectedValue;
             conn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where StaffRoomID =" + a , conn);
+            SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where StaffRoomID =@SelectID", conn);
+            cmd.Parameters.AddWithValue("@SelectID", a);
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             adapt.Fill(ds);
@@ -86,11 +87,9 @@ namespace Senpai__Organization_
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where CreatingOrganization =" + x.SenpaiId + "", conn);
             try
             {
-                object a = StaffRoomListComboBox.SelectedValue;
-
-                SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where StaffRoomID =" + a, conn);
                 conn.Open();
                 SqlDataAdapter adapt = new SqlDataAdapter(cmd);
                 DataSet ds = new DataSet();
