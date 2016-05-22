@@ -196,31 +196,44 @@ namespace Senpai__Organization_
             BRemove.Visible = true;
             RemovePanel.Visible = false;
             SqlCommand CommandToDeleteMember = new SqlCommand("DELETE FROM StaffRoomMemberList WHERE StaffRoomMembershipID = "+RemoveMemberComboBox.ValueMember+" ", conn);
+            SqlCommand CommandTOChangeTeacherTable = new SqlCommand("UPDATE Senpai_Teacher SET StaffRoomRequestID = 0 , StaffRoomID = NULL WHERE StaffRoomID = @SID", conn);
+            CommandTOChangeTeacherTable.Parameters.AddWithValue("@SID", sv.StafffRoomID);
                      
+            conn.Open();
+            CommandToDeleteMember.ExecuteNonQuery();
+            CommandTOChangeTeacherTable.ExecuteNonQuery();
+            conn.Close();
+            MemberDataGridView.DataSource = GetData("Select TeacherName, Email FROM StaffRoomMemberList Where StaffRoomID =" + sv.StafffRoomID + " ");
+            // Resize the DataGridView columns to fit the newly loaded content.
+            MemberDataGridView.AutoResizeColumns(
+                    DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            SqlCommand RemoveMemberQuery = new SqlCommand("Select * from StaffRoomMemberList where StaffRoomID =" + sv.StafffRoomID + "", conn);
+            try
+            {
                 conn.Open();
-                CommandToDeleteMember.ExecuteNonQuery();
+                SqlDataAdapter adapt = new SqlDataAdapter(RemoveMemberQuery);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
                 conn.Close();
+                RemoveMemberComboBox.DataSource = ds.Tables[0];
+                RemoveMemberComboBox.ValueMember = "StaffRoomMembershipID";
+                RemoveMemberComboBox.DisplayMember = "TeacherName";
+            }
+            catch
+            {
+                MessageBox.Show("We are suffering from some technical difficulty. Kindly try again after some time");
+            }
 
-                
 
         }
 
-        private void BAdd_Click(object sender, EventArgs e)
-        {
-            RequestPanel.Visible = true;
-            BAdd.Visible = false;
+        
 
-        }
+        
 
-        private void ReqCancelB_Click(object sender, EventArgs e)
+     /*   private void ReqConfirmB_Click(object sender, EventArgs e)
         {
-            BAdd.Visible = true;
-            RequestPanel.Visible = false;
-        }
-
-        private void ReqConfirmB_Click(object sender, EventArgs e)
-        {
-            int ID = Int32.Parse(AddMemberComboBox.ValueMember.ToString());
+           // int ID = Int32.Parse(AddMemberComboBox.ValueMember.ToString());
             Object a = StaffRoomRequestTableDataSet.Tables[0].Rows[ID]["Email"];
             SqlCommand AddMemberQuery = new SqlCommand("Select Email from StaffRoomRequestTable where RequestedStaffRoomID =" + sv.StafffRoomID + "", conn);
             SqlCommand CommandToAddMember = new SqlCommand("INSERT INTO StaffRoomMemberList (StaffRoomID, TeacherName, TeacherID) VALUES ('"+sv.StafffRoomID+"', '"+AddMemberComboBox.Text + "','"+AddMemberComboBox.SelectedValue + "')", conn);
@@ -228,7 +241,7 @@ namespace Senpai__Organization_
             conn.Open();
             CommandToAddMember.ExecuteNonQuery();
             conn.Close();
-        }
+        }*/
 
         private void QuorumDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

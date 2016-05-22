@@ -34,7 +34,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.EmailTB = new System.Windows.Forms.TextBox();
             this.PasswordTB = new System.Windows.Forms.TextBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.LoadingLabel = new System.Windows.Forms.Label();
@@ -80,18 +79,9 @@
             // 
             this.PasswordTB.Location = new System.Drawing.Point(147, 137);
             this.PasswordTB.Name = "PasswordTB";
+            this.PasswordTB.PasswordChar = '*';
             this.PasswordTB.Size = new System.Drawing.Size(100, 20);
             this.PasswordTB.TabIndex = 2;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(165, 215);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(92, 13);
-            this.linkLabel1.TabIndex = 4;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Forgot Password?";
             // 
             // linkLabel3
             // 
@@ -135,7 +125,6 @@
             this.Controls.Add(this.LoadingLabel);
             this.Controls.Add(this.linkLabel3);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.PasswordTB);
             this.Controls.Add(this.EmailTB);
             this.Controls.Add(this.label2);
@@ -158,7 +147,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox EmailTB;
         private System.Windows.Forms.TextBox PasswordTB;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel3;
         private System.Windows.Forms.Label LoadingLabel;

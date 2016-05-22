@@ -13,6 +13,7 @@ namespace Senpai_Student_
     public partial class FindClassroom : Form
     {
         SessionValues sv;
+        SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
         public FindClassroom(SessionValues ob)
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Senpai_Student_
         private void FindClassroom_Load(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
+            
             SqlCommand cmd = new SqlCommand("Select * from ClassRoomTable", conn);
             conn.Open();
             SqlDataAdapter adapt = new SqlDataAdapter(cmd);
@@ -30,25 +31,26 @@ namespace Senpai_Student_
             adapt.Fill(ds);
             conn.Close();
          
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
             comboBox1.DataSource = ds.Tables[0];
             comboBox1.ValueMember = "ClassRoomID";
             comboBox1.DisplayMember = "Name";
             String QueryToInsert = "INSERT INTO ClassRoomMemberTable (StudentID,StudentName,ClassRoomID,ClassRoomName)VALUES (@StudentID,@StudenName,@ClassRoomID,@ClassRoomName)";
 
-            SqlCommand CommandToInsertIntoMembershipTable = new SqlCommand(QueryToInsert,conn);
+            SqlCommand CommandToInsertIntoMembershipTable = new SqlCommand(QueryToInsert, conn);
             CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@StudentID", sv.SenpaiID);
-            CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@StudenName",sv.UserName);
+            CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@StudenName", sv.UserName);
             CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@ClassRoomID", comboBox1.SelectedValue);
             CommandToInsertIntoMembershipTable.Parameters.AddWithValue("@ClassRoomName", comboBox1.Text);
             conn.Open();
             CommandToInsertIntoMembershipTable.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("ClassRoom Added!");
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

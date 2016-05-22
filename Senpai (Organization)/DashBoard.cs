@@ -55,7 +55,7 @@ namespace Senpai__Organization_
         {
             ViewDetails ob = new ViewDetails(x);
             ob.Show();
-            Hide();
+            
         }
 
         private void ViewButton_Click(object sender, EventArgs e)
