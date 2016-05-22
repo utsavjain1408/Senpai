@@ -73,5 +73,21 @@ namespace Senpai_Student_
             ViewInfo ob = new ViewInfo(sv);
             ob.Show();
         }
+
+        private void RefreshButton_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("Select * from ClassRoomMemberTable WHERE StudentID =@StudentID ", conn);
+            cmd.Parameters.AddWithValue("@StudentID", sv.SenpaiID);
+            conn.Open();
+            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+
+            adapt.Fill(ds);
+            conn.Close();
+
+            comboBoxClassroomSelector.DataSource = ds.Tables[0];
+            comboBoxClassroomSelector.ValueMember = "ClassRoomID";
+            comboBoxClassroomSelector.DisplayMember = "ClassRoomName";
+        }
     }
 }

@@ -30,16 +30,17 @@ namespace Senpai_Student_
 
             adapt.Fill(ds);
             conn.Close();
-         
-            
+            comboBox1.DataSource = ds.Tables[0];
+            comboBox1.ValueMember = "ClassRoomID";
+            comboBox1.DisplayMember = "Name";
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             DataSet ds = new DataSet();
-            comboBox1.DataSource = ds.Tables[0];
-            comboBox1.ValueMember = "ClassRoomID";
-            comboBox1.DisplayMember = "Name";
+            
             String QueryToInsert = "INSERT INTO ClassRoomMemberTable (StudentID,StudentName,ClassRoomID,ClassRoomName)VALUES (@StudentID,@StudenName,@ClassRoomID,@ClassRoomName)";
 
             SqlCommand CommandToInsertIntoMembershipTable = new SqlCommand(QueryToInsert, conn);

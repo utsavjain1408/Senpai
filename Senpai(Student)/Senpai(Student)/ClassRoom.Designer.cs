@@ -325,6 +325,7 @@
             // 
             // Q3ComboBox
             // 
+            this.Q3ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Q3ComboBox.FormattingEnabled = true;
             this.Q3ComboBox.Items.AddRange(new object[] {
             "A",
@@ -413,6 +414,7 @@
             // 
             // Q2ComboBox
             // 
+            this.Q2ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Q2ComboBox.FormattingEnabled = true;
             this.Q2ComboBox.Items.AddRange(new object[] {
             "A",
@@ -486,6 +488,7 @@
             // 
             // Q1ComboBox
             // 
+            this.Q1ComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Q1ComboBox.FormattingEnabled = true;
             this.Q1ComboBox.Items.AddRange(new object[] {
             "A",

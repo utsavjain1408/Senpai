@@ -37,6 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxClassroomSelector = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.RefreshButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -73,12 +74,13 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.RefreshButton);
             this.panel1.Controls.Add(this.OpenClassRoomButton);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.comboBoxClassroomSelector);
             this.panel1.Location = new System.Drawing.Point(32, 180);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(179, 147);
+            this.panel1.Size = new System.Drawing.Size(218, 147);
             this.panel1.TabIndex = 4;
             // 
             // OpenClassRoomButton
@@ -102,6 +104,7 @@
             // 
             // comboBoxClassroomSelector
             // 
+            this.comboBoxClassroomSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxClassroomSelector.FormattingEnabled = true;
             this.comboBoxClassroomSelector.Location = new System.Drawing.Point(37, 49);
             this.comboBoxClassroomSelector.Name = "comboBoxClassroomSelector";
@@ -117,6 +120,17 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
+            // 
+            // RefreshButton
+            // 
+            this.RefreshButton.Image = global::Senpai_Student_.Properties.Resources.Refresh_Icon;
+            this.RefreshButton.Location = new System.Drawing.Point(155, 32);
+            this.RefreshButton.Name = "RefreshButton";
+            this.RefreshButton.Size = new System.Drawing.Size(51, 52);
+            this.RefreshButton.TabIndex = 8;
+            this.RefreshButton.Text = " ";
+            this.RefreshButton.UseVisualStyleBackColor = true;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // Home
             // 
@@ -150,5 +164,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxClassroomSelector;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button RefreshButton;
     }
 }
