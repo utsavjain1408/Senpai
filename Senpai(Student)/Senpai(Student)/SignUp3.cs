@@ -47,8 +47,10 @@ namespace Senpai_Student_
                 ob.College = TBCollege.Text;
                 ob.Stream = StreamTextBox.Text;
                 ob.AboutYourself = AboutYourselfRichTextBox.Text;
+                this.Close();
                 SignUpFinal s = new SignUpFinal(ob, this);
                 s.Visible = true;
+
             }
         }
 

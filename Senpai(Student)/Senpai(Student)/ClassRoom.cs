@@ -156,7 +156,9 @@ namespace Senpai_Student_
             conn.Open();
             DeleteUserFromClassRoomQuery.ExecuteNonQuery();
             conn.Close();
+            MessageBox.Show("Sorry To See You Leave!!.");
             this.Close();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)

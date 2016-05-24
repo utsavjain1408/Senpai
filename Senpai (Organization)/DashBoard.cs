@@ -61,23 +61,30 @@ namespace Senpai__Organization_
         private void ViewButton_Click(object sender, EventArgs e)
         {
             object a = StaffRoomListComboBox.SelectedValue;
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where StaffRoomID =@SelectID", conn);
-            cmd.Parameters.AddWithValue("@SelectID", a);
-            SqlDataAdapter adapt = new SqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            adapt.Fill(ds);
-            conn.Close();
-            x.StaffRoomID= ds.Tables[0].Rows[0]["StaffRoomID"].ToString();
-            StaffRoomSessionVariables sv = new StaffRoomSessionVariables();
-            sv.StaffRoomName = ds.Tables[0].Rows[0]["Name"].ToString();
-            sv.Subject = ds.Tables[0].Rows[0]["Subject"].ToString(); 
-            sv.Department = ds.Tables[0].Rows[0]["Department"].ToString(); 
-            sv.Description = ds.Tables[0].Rows[0]["Description"].ToString(); 
-            sv.StafffRoomID = ds.Tables[0].Rows[0]["StaffRoomID"].ToString();
-            sv.HODName = x.HeadPersonName;
-            StaffRoom ob = new StaffRoom(sv);
-            ob.Show();
+            if (a == null)
+            {
+                MessageBox.Show("Kindly Select a value.");
+            }
+            else
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("Select * from StaffRoomTable where StaffRoomID =@SelectID", conn);
+                cmd.Parameters.AddWithValue("@SelectID", a);
+                SqlDataAdapter adapt = new SqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                adapt.Fill(ds);
+                conn.Close();
+                x.StaffRoomID = ds.Tables[0].Rows[0]["StaffRoomID"].ToString();
+                StaffRoomSessionVariables sv = new StaffRoomSessionVariables();
+                sv.StaffRoomName = ds.Tables[0].Rows[0]["Name"].ToString();
+                sv.Subject = ds.Tables[0].Rows[0]["Subject"].ToString();
+                sv.Department = ds.Tables[0].Rows[0]["Department"].ToString();
+                sv.Description = ds.Tables[0].Rows[0]["Description"].ToString();
+                sv.StafffRoomID = ds.Tables[0].Rows[0]["StaffRoomID"].ToString();
+                sv.HODName = x.HeadPersonName;
+                StaffRoom ob = new StaffRoom(sv);
+                ob.Show();
+            }
         }
 
         private void StaffRoomListComboBox_SelectedIndexChanged(object sender, EventArgs e)

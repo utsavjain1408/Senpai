@@ -52,6 +52,7 @@ namespace Senpai_Student_
             CommandToInsertIntoMembershipTable.ExecuteNonQuery();
             conn.Close();
             MessageBox.Show("ClassRoom Added!");
+            this.Close();
         }
     }
 }

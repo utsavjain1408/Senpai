@@ -87,6 +87,8 @@ namespace Senpai_Student_
                         sv.PhoneNumber = ds1.Tables[0].Rows[0]["PhoneNumber"].ToString();
                         sv.Gender = ds1.Tables[0].Rows[0]["Gender"].ToString();
                         sv.City = ds1.Tables[0].Rows[0]["City"].ToString();
+                        sv.Stream = ds1.Tables[0].Rows[0]["Stream"].ToString();
+                        sv.College = ds1.Tables[0].Rows[0]["College"].ToString();
                         sv.AboutYourself = ds1.Tables[0].Rows[0]["AboutYourself"].ToString();
                         Home ob = new Home(sv);
                         ob.Show();
@@ -124,6 +126,11 @@ namespace Senpai_Student_
             {
                 return false;
             }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -45,7 +45,7 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Location = new System.Drawing.Point(12, 116);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(367, 195);
+            this.panel1.Size = new System.Drawing.Size(367, 120);
             this.panel1.TabIndex = 5;
             // 
             // label1
@@ -90,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 360);
+            this.ClientSize = new System.Drawing.Size(388, 253);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

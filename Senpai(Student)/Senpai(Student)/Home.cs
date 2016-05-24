@@ -62,10 +62,18 @@ namespace Senpai_Student_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sv.ClassRoomID = comboBoxClassroomSelector.SelectedValue.ToString();
-            sv.MemberShipID = ds.Tables[0].Rows[0]["MemberShipID"].ToString();
-            ClassRoom ob = new ClassRoom(sv);
-            ob.Show();
+           
+            if (comboBoxClassroomSelector.SelectedValue == null)
+            {
+                MessageBox.Show("Kindly Select A ClassRoom.!");
+            }
+            else
+            {
+                sv.ClassRoomID = comboBoxClassroomSelector.SelectedValue.ToString();
+                sv.MemberShipID = ds.Tables[0].Rows[0]["MemberShipID"].ToString();
+                ClassRoom ob = new ClassRoom(sv);
+                ob.Show();
+            }
         }
 
         private void ButtonViewInfo_Click(object sender, EventArgs e)
@@ -76,6 +84,8 @@ namespace Senpai_Student_
 
         private void RefreshButton_Click(object sender, EventArgs e)
         {
+             ds = new DataSet();
+            //ComboBox temp = new ComboBox();
             SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["AzureString"].ConnectionString);
             SqlCommand cmd = new SqlCommand("Select * from ClassRoomMemberTable WHERE StudentID =@StudentID ", conn);
             cmd.Parameters.AddWithValue("@StudentID", sv.SenpaiID);
@@ -88,6 +98,7 @@ namespace Senpai_Student_
             comboBoxClassroomSelector.DataSource = ds.Tables[0];
             comboBoxClassroomSelector.ValueMember = "ClassRoomID";
             comboBoxClassroomSelector.DisplayMember = "ClassRoomName";
+            //comboBoxClassroomSelector = temp;
         }
     }
 }
